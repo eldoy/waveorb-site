@@ -34,7 +34,7 @@ After that add a layout. The layouts will be used for all of your emails.
 
 ### Mail layouts
 
-Similar to the page layouts, mail layouts contain the header and footer of your mail views. Usually they contain the signature and things your want included with every outgoing email.
+Similar to the page layouts, mail layouts contain the header and footer of your mail views. Usually they contain the signature and things you want included with every outgoing email.
 
 Add an HTML layout by creating a new file in `app/layouts/html.js`:
 ```js

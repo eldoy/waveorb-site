@@ -76,7 +76,7 @@ waveorb create myapp
 # Specify the template name, the default name is 'default'
 waveorb create myapp default
 ```
-The default application is a fully working app with pages, layouts, actions, uploads, login, payment and much more. Read through the source code to learn more. Remove the thing your don't need.
+The default application is a fully working app with pages, layouts, actions, uploads, login, payment and much more. Read through the source code to learn more. Remove the things you don't need.
 
 ### Deploy
 The `waveorb deploy` command copies `app`, `dist`, `package.json` and `package-lock.json` files to the VPS server. It then runs `npm install` and restarts the app.
@@ -134,7 +134,7 @@ waveorb ping https://example.com/sitemap.xml
 The `waveorb generate` command will generate actions and pages for a model. Let's say you want to create templates and actions for a model called `project`, then you run `waveorb generate model project`, and all the necessary files will be created for you automatically for that model.
 
 ### Translate
-The `waveorb translate` command lets your translate YAML files using the Google Translate API from the command line.
+The `waveorb translate` command lets you translate YAML files using the Google Translate API from the command line.
 
 Add your [Google Translate API credentials](https://cloud.google.com/translate/docs) to `$HOME/.google/credentials.json` for example.
 

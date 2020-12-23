@@ -12,7 +12,7 @@ All our libraries are focused on speed and performance using only the latest tec
 
 Waveorb is open source, totally free and MIT licensed. Use it for whatever you want without paying anything. The code is hosted on [Github](https://github.com/eldoy/waveorb) where anyone can read the source code, report issues and contribute. The platform is installed via [npm](https://npmjs.com), the standard package manager for [NodeJS.](https://nodejs.org)
 
-At the moment Waveorb consists of many smaller libraries and can be used for frontend, backend or deployment, as standalone apps or integrated into or alongside existing apps. If it's running Javascript your can use it. It is extremely versatile.
+At the moment Waveorb consists of many smaller libraries and can be used for frontend, backend or deployment, as standalone apps or integrated into or alongside existing apps. If it's running Javascript you can use it. It's extremely versatile.
 
 ## Speedy HTML
 

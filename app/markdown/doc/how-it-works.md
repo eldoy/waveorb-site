@@ -21,7 +21,7 @@ When you start your app with `waveorb serve`, or if you're using the [nodemon sc
 The page function receives a single object, the orb object `$`, which contains all of your built in properties and functions:
 
 * `$.app` - Your entire app as an object
-* `$.params` - Parameters your sent from the client
+* `$.params` - Parameters you sent from the client
 * `$.query` - Query parameters from the URL
 * `$.files` - Uploaded files as an array
 * `$.req` - Request object, a NodeJS [http.ServerResponse instance](https://nodejs.org/api/http.html#http_class_http_serverresponse)

@@ -4,7 +4,7 @@ Layouts surround [your pages](/doc/pages.html) and [mails](/doc/mail.html). It i
 
 You specify the layout to use in your page with `$.page.layout = 'blog'`, where `'blog'` is the name of the layout. In this case it would match the layout file `app/layouts/blog.js`. If none is specified, it defaults to `default`.
 
-Mail layouts usually contain the signature and things your want included with every outgoing email.
+Mail layouts usually contain the signature and things you want included with every outgoing email.
 
 This minimal example layout is based on the one found in `app/layouts/default.js` after running `waveorb create`, read the comments to see what each section does:
 ```js
