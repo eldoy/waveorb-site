@@ -1,0 +1,20 @@
+{
+  "name": "waveorb-site",
+  "version": "0.1.0",
+  "description": "The https://waveorb.com web site",
+  "main": "index.js",
+  "scripts": {
+    "serve": "nodemon -e js,json,yml -i dist -x waveorb serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eldoy/waveorb-site"
+  },
+  "author": "Vidar Eldøy <vidar@eldoy.com>",
+  "license": "MIT",
+  "dependencies": {
+    "conficurse": "^0.2.1",
+    "marked": "^1.2.7",
+    "prismjs": "^1.22.0"
+  }
+}
