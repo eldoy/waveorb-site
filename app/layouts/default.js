@@ -6,10 +6,12 @@ module.exports = async function($) {
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Waveorb - Javascript framework for creating incredible web apps">
-        <title>${ $.page.title || '♥' } - Waveorb</title>
-        <link rel="stylesheet" href="/css/app.css" type="text/css">
-        <link rel="stylesheet" href="/css/prism.css" type="text/css" media="print" onload="this.media='all'">
+        <title>${$.page.title || '♥'} - Waveorb</title>
         <link rel="icon" type="image/png" href="/img/favicon.png">
+        ${$.script('/bundle.js')}
+        ${$.style('/bundle.css')}
+        <link rel="stylesheet" href="/css/prism.css" type="text/css" media="print" onload="this.media='all'">
+        ${process.env.NODE_ENV == 'development' ? $.script('/js/dev.js') : ''}
       </head>
       <body>
         <header>
@@ -33,7 +35,7 @@ module.exports = async function($) {
             </script>
           </nav>
         </header>
-        <div class="main">${ $.page.content }</div>
+        <main>${$.page.content}</main>
       </body>
     </html>
   `

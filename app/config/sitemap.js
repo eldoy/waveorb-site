@@ -1,4 +1,8 @@
-const files = require('../lib/files.js')
+const path = require('path')
+const root = path.join(process.cwd(), 'app', 'pages')
+const files = require('extras').tree('app/pages').map(f => {
+  return f.replace(root, '').replace(/\.(md|js)/, '.html')
+})
 
 const urls = [
   { url: '/', lastmodfile: 'dist/index.html', changefreq: 'daily', priority: 1.0 },

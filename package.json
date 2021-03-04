@@ -4,7 +4,19 @@
   "description": "The https://waveorb.com web site",
   "main": "index.js",
   "scripts": {
-    "serve": "nodemon -e js,json,yml -i dist -x waveorb serve"
+    "dev": "npm run clear:css && npm run build:css && concurrently -n 🔥,💗 \"npm run watch:app\" \"npm run watch:css\"",
+    "watch:app": "nodemon -e js,mjs,json,yml,css,md -i dist -x waveorb serve",
+    "watch:css": "sass --watch app/assets/scss/app.scss app/assets/css/build/app.css",
+    "build:css": "sass app/assets/scss/app.scss app/assets/css/build/app.css",
+    "build:css:min": "sass --style compressed --no-source-map app/assets/scss/app.scss app/assets/css/build/app.css",
+    "clear:css": "rm -rf app/assets/css/build",
+    "build": "npm run clear:css && npm run build:css:min && waveorb build",
+    "test": "jest --watch",
+    "generate": "waveorb generate",
+    "migrate": "waveorb migrate",
+    "update": "waveorb update",
+    "deploy": "waveorb deploy",
+    "serve": "waveorb serve"
   },
   "repository": {
     "type": "git",
@@ -13,8 +25,11 @@
   "author": "Vidar Eldøy <vidar@eldoy.com>",
   "license": "MIT",
   "dependencies": {
-    "conficurse": "^0.2.1",
-    "marked": "^1.2.7",
-    "prismjs": "^1.22.0"
+    "extras": "^0.6.1",
+    "sass": "^1.32.8",
+    "waveorb": "^0.13.20"
+  },
+  "devDependencies": {
+    "concurrently": "^6.0.0"
   }
 }

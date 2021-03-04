@@ -1,0 +1,931 @@
+@charset 'utf-8';
+
+/* Document
+ * ========================================================================== */
+
+/**
+ * Add border box sizing in all browsers (opinionated).
+ */
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/**
+ * 1. Add text decoration inheritance in all browsers (opinionated).
+ * 2. Add vertical alignment inheritance in all browsers (opinionated).
+ */
+
+::before,
+::after {
+  text-decoration: inherit; /* 1 */
+  vertical-align: inherit; /* 2 */
+}
+
+/**
+ * 1. Use the default cursor in all browsers (opinionated).
+ * 2. Change the line height in all browsers (opinionated).
+ * 3. Breaks words to prevent overflow in all browsers (opinionated).
+ * 4. Use a 4-space tab width in all browsers (opinionated).
+ * 5. Remove the grey highlight on links in iOS (opinionated).
+ * 6. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+  cursor: default; /* 1 */
+  line-height: 1.5; /* 2 */
+  overflow-wrap: anywhere; /* 3 */
+  -moz-tab-size: 4; /* 4 */
+  tab-size: 4; /* 4 */
+  -webkit-tap-highlight-color: transparent /* 5 */;
+  -webkit-text-size-adjust: 100%; /* 6 */
+}
+
+/* Sections
+ * ========================================================================== */
+
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+
+body {
+  margin: 0;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Edge, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+ * ========================================================================== */
+
+/**
+ * Remove the margin on nested lists in Chrome, Edge, and Safari.
+ */
+
+dl dl,
+dl ol,
+dl ul,
+ol dl,
+ul dl {
+  margin: 0;
+}
+
+/**
+ * 1. Correct the inheritance of border color in Firefox.
+ * 2. Add the correct box sizing in Firefox.
+ */
+
+hr {
+  color: inherit; /* 1 */
+  height: 0; /* 2 */
+}
+
+/**
+ * Remove the list style on navigation lists in all browsers (opinionated).
+ */
+
+nav ol,
+nav ul {
+  list-style: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E");
+  padding: 0;
+}
+
+/**
+ * Prevent VoiceOver from ignoring list semantics in Safari (opinionated).
+ */
+
+nav li::before {
+  content: "\200B";
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ * 3. Prevent overflow of the container in all browsers (opinionated).
+ */
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+  overflow: auto; /* 3 */
+}
+
+/* Text-level semantics
+ * ========================================================================== */
+
+/**
+ * Add the correct text decoration in Safari.
+ */
+
+abbr[title] {
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/* Embedded content
+ * ========================================================================== */
+
+/*
+ * Change the alignment on media elements in all browsers (opinionated).
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Remove the border on iframes in all browsers (opinionated).
+ */
+
+iframe {
+  border-style: none;
+}
+
+/**
+ * Change the fill color to match the text color in all browsers (opinionated).
+ */
+
+svg:not([fill]) {
+  fill: currentColor;
+}
+
+/* Tabular data
+ * ========================================================================== */
+
+/**
+ * 1. Collapse border spacing in all browsers (opinionated).
+ * 2. Correct table border color inheritance in all Chrome, Edge, and Safari.
+ * 3. Remove text indentation from table contents in Chrome, Edge, and Safari.
+ */
+
+table {
+  border-collapse: collapse; /* 1 */
+  border-color: inherit; /* 2 */
+  text-indent: 0; /* 3 */
+}
+
+/* Forms
+ * ========================================================================== */
+
+/**
+ * Remove the margin on controls in Safari.
+ */
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+/**
+ * Remove the inheritance of text transform in Firefox.
+ */
+
+button {
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style buttons in iOS and Safari.
+ */
+
+button,
+[type="button" i],
+[type="reset" i],
+[type="submit" i] {
+  -webkit-appearance: button;
+}
+
+/**
+ * 1. Change the inconsistent appearance in all browsers (opinionated).
+ * 2. Correct the padding in Firefox.
+ */
+
+fieldset {
+  border: 1px solid #a0a0a0; /* 1 */
+  padding: 0.35em 0.75em 0.625em; /* 2 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Edge, and Firefox.
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the inheritance of text transform in Firefox.
+ */
+
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Remove the margin in Firefox and Safari.
+ * 3. Change the resize direction in all browsers (opinionated).
+ */
+
+textarea {
+  margin: 0; /* 1 */
+  resize: vertical; /* 3 */
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome, Edge, and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search" i] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Safari.
+ */
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ */
+
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+
+/**
+ * Remove the inner padding in Chrome, Edge, and Safari on macOS.
+ */
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style upload buttons in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/**
+ * Remove the inner border and padding of focus outlines in Firefox.
+ */
+
+::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus outline styles unset by the previous rule in Firefox.
+ */
+
+:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Remove the additional :invalid styles in Firefox.
+ */
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/* Interactive
+ * ========================================================================== */
+
+/*
+ * Add the correct styles in Safari.
+ */
+
+dialog {
+  background-color: white;
+  border: solid;
+  color: black;
+  height: -moz-fit-content;
+  height: -webkit-fit-content;
+  height: fit-content;
+  left: 0;
+  margin: auto;
+  padding: 1em;
+  position: absolute;
+  right: 0;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+}
+
+dialog:not([open]) {
+  display: none;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Accessibility
+ * ========================================================================== */
+
+/**
+ * Change the cursor on busy elements in all browsers (opinionated).
+ */
+
+[aria-busy="true" i] {
+  cursor: progress;
+}
+
+/*
+ * Change the cursor on control elements in all browsers (opinionated).
+ */
+
+[aria-controls] {
+  cursor: pointer;
+}
+
+/*
+ * Change the cursor on disabled, not-editable, or otherwise
+ * inoperable elements in all browsers (opinionated).
+ */
+
+[aria-disabled="true" i],
+[disabled] {
+  cursor: not-allowed;
+}
+
+/*
+ * Change the display on visually hidden accessible elements
+ * in all browsers (opinionated).
+ */
+
+[aria-hidden="false" i][hidden] {
+  display: initial;
+}
+
+[aria-hidden="false" i][hidden]:not(:focus) {
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+
+// Colors
+$primary: #44f !default;
+$text: #111 !default;
+$white: #fff !default;
+$black: #000 !default;
+$light: #dfdfdf !default;
+$dark: #5a5a5a !default;
+$highlight: #ffa !default;
+$danger: #f55 !default;
+$line: #eaeaea !default;
+$disabled: #fafafa !default;
+$medium: #ccc !default;
+$preserve: #fafafa !default;
+$button: #efefef !default;
+$small: #999 !default;
+
+// Basic stylings
+$border: 1px solid $line !default;
+$border-radius: 4px !default;
+
+// Padding
+$xs-pad: 4px !default;
+$sm-pad: 8px !default;
+$md-pad: 16px !default;
+$lg-pad: 20px !default;
+$xl-pad: 40px !default;
+
+// Breakpoints
+$xl-breakpoint: 1140px !default;
+$lg-breakpoint: 960px !default;
+$md-breakpoint: 600px !default;
+$sm-breakpoint: 400px !default;
+$xs-breakpoint: 360px !default;
+
+// Links
+$link-color: $primary !default;
+$link-hover-color: darken($link-color, 10%) !default;
+
+// Buttons
+$button-background-color: $button !default;
+$button-border-radius: $border-radius !default;
+$button-color: $text !default;
+$button-padding: $sm-pad $md-pad !default;
+$button-border: 1px solid $medium !default;
+$button-font-size: 1rem !default;
+$button-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
+$button-hover-background-color: darken($button, 7.5%) !default;
+$button-active-background-color: darken($button, 10%) !default;
+$button-focus-outline: 0 !default;
+$button-focus-shadow: 0 0 0 0.2rem fade_out($primary, 0.75) !default;
+$button-disabled-background-color: $button !default;
+
+// Forms
+$label-color: $dark !default;
+$label-font-size: 90% !default;
+$label-line-height: 2 !default;
+$input-border: 1px solid $medium;
+$input-focus-background-color: #fff !default;
+$input-focus-border-color: mix($primary, #fff) !default;
+$input-focus-outline: 0 !default;
+$input-focus-shadow: 0 0 0 0.2rem fade_out($primary, 0.75) !default;
+$input-outline: 1px thin $line !default;
+$input-disabled-background-color: $disabled !default;
+$input-readonly-background-color: $disabled !default;
+$input-invalid-border-color: darken($danger, 10%) !default;
+$input-invalid-color: $danger !default;
+$input-focus-invalid-outline-color: $danger !default;
+
+// Font
+$sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !default;
+$serif: Georgia, Times, 'Times New Roman', serif !default;
+$monospace: Menlo, Monaco, Consolas, 'Courier New', monospace !default;
+$font-family: $sans-serif !default;
+
+// Typography
+$font-size: 16px !default;
+$font-size-small: ceil(($font-size * 0.85)) !default;
+$font-size-h1: 40px !default;
+$font-size-h2: 32px !default;
+$font-size-h3: 25px !default;
+$font-size-h4: 18px !default;
+$font-size-h5: 16px !default;
+$font-size-h6: 80% !default;
+$line-height: 1.6 !default;
+
+main,
+header,
+footer,
+article,
+section,
+aside,
+details,
+summary {
+  margin: 0 auto;
+  margin-bottom: $md-pad;
+  width: 100%;
+}
+
+main {
+  display: block;
+  max-width: $md-breakpoint;
+  padding: 0 $md-pad $md-pad;
+}
+
+footer {
+  padding: $md-pad 0;
+  text-align: center;
+  p {
+    margin-bottom: 0;
+  }
+}
+
+hr {
+  border: 0;
+  border-top: $border;
+  display: block;
+  margin: $md-pad 0;
+  width: 100%;
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: baseline;
+}
+
+embed,
+iframe,
+video {
+  border: 0;
+}
+
+@media screen and (max-width: $sm-breakpoint) {
+  article,
+  section,
+  aside {
+    clear: both;
+    display: block;
+    max-width: 100%;
+  }
+}
+
+body {
+  color: $text;
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+p {
+  margin: 0 0 $md-pad;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: inherit;
+  font-family: inherit;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: $font-size-h1;
+  margin: $lg-pad 0 $md-pad;
+}
+
+h2 {
+  font-size: $font-size-h2;
+  margin: $lg-pad 0 $md-pad;
+}
+
+h3 {
+  font-size: $font-size-h3;
+  margin: $md-pad 0 $sm-pad;
+}
+
+h4 {
+  font-size: $font-size-h4;
+  margin: $md-pad 0 $sm-pad;
+}
+
+h5 {
+  font-size: $font-size-h5;
+  margin: $md-pad 0 $sm-pad;
+}
+
+h6 {
+  font-size: $font-size-h6;
+  margin: $md-pad 0 $sm-pad;
+}
+
+pre {
+  background: $preserve;
+  color: $text;
+  display: block;
+  font-family: $monospace;
+  font-size: $font-size;
+  margin: $md-pad 0;
+  padding: $md-pad;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
+code {
+  color: $text;
+  font-family: $monospace;
+  font-size: $font-size;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+a:not(.button) {
+  color: $link-color;
+  text-decoration: none;
+  background-color: transparent;
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: underline;
+  }
+}
+
+blockquote {
+  border-left: 2px solid $medium;
+  font-family: $serif;
+  font-style: italic;
+  margin: $md-pad 0;
+  padding-left: $md-pad;
+}
+
+figcaption {
+  font-family: $serif;
+}
+
+u {
+  text-decoration: underline;
+}
+
+s {
+  text-decoration: line-through;
+}
+
+sup {
+  font-size: $font-size-small;
+  vertical-align: super;
+}
+
+sub {
+  font-size: $font-size-small;
+  vertical-align: sub;
+}
+
+mark {
+  background: $highlight;
+}
+
+@mixin focus {
+  background-color: $input-focus-background-color;
+  border-color: $input-focus-border-color;
+  outline: $input-focus-outline;
+  box-shadow: $input-focus-shadow;
+}
+
+input:not([type]),
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="week"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+select,
+textarea,
+trix-editor,
+.StripeElement {
+  background: $white;
+  background-clip: padding-box;
+  border: $input-border;
+  border-radius: $border-radius;
+  color: $text;
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  padding: $sm-pad $md-pad;
+  line-height: 1.5;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  font-family: $sans-serif;
+  word-break: normal;
+  &:focus {
+    @include focus;
+  }
+  &[disabled] {
+    background-color: $input-disabled-background-color;
+    cursor: not-allowed;
+    opacity: 1;
+  }
+  &[readonly] {
+    background-color: $input-readonly-background-color;
+  }
+}
+
+.StripeElement--focus {
+  @include focus;
+}
+
+input[type="color"] {
+  background: $white;
+  border: $border;
+  border-radius: $border-radius;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: $input-outline;
+}
+
+input:focus:invalid,
+textarea:focus:invalid,
+select:focus:invalid {
+  border-color: $input-invalid-border-color;
+  color: $input-invalid-color;
+}
+
+input[type="file"]:focus:invalid:focus,
+input[type="radio"]:focus:invalid:focus,
+input[type="checkbox"]:focus:invalid:focus {
+  outline-color: $input-focus-invalid-outline-color;
+}
+
+select {
+  vertical-align: sub;
+  &:not([size]):not([multiple]) {
+    height: calc(2.25rem + 2px);
+  }
+  &[multiple] {
+    height: auto;
+  }
+}
+
+label {
+  display: inline-block;
+  line-height: $label-line-height;
+  color: $label-color;
+  font-size: $label-font-size;
+}
+
+legend {
+  padding: 0;
+  display: table;
+  font-size: $font-size;
+  margin-bottom: $sm-pad;
+}
+
+fieldset {
+  border: 0;
+  padding: 0.01em 0 0 0;
+  margin: 0;
+  min-width: 0;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+  display: inline;
+}
+
+form em {
+  display: block;
+  color: $danger;
+  font-style: normal;
+}
+
+form fieldset {
+  margin: 0 0 $md-pad;
+}
+input[type=submit],
+input[type=reset],
+input[type=button],
+button,
+.button {
+  background-color: $button-background-color;
+  border-radius: $button-border-radius;
+  color: $button-color;
+  padding: $button-padding;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: $button-border;
+  font-size: $button-font-size;
+  line-height: 1.5;
+  transition: $button-transition;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+input[type=submit]::-moz-focus-inner,
+input[type=reset]::-moz-focus-inner,
+input[type=button]::-moz-focus-inner,
+button::-moz-focus-inner {
+  padding: 0;
+}
+
+input[type=submit]:hover,
+input[type=reset]:hover,
+input[type=button]:hover,
+button:hover,
+.button:hover {
+  background-color: $button-hover-background-color;
+}
+
+input[type=submit]:not(:disabled):active,
+input[type=reset]:not(:disabled):active,
+input[type=button]:not(:disabled):active,
+button:not(:disabled):active,
+.button:active {
+  background-color: $button-active-background-color;
+}
+
+input[type=submit]:focus,
+input[type=reset]:focus,
+input[type=button]:focus,
+button:focus,
+.button:focus {
+  outline: $button-focus-outline;
+  box-shadow: $button-focus-shadow;
+}
+
+input[type=submit]:disabled,
+input[type=reset]:disabled,
+input[type=button]:disabled,
+button:disabled,
+.button.disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  background-color: $button-disabled-background-color;
+}
+
+dl {
+  margin-bottom: $md-pad;
+}
+
+dd {
+  margin-left: $xl-pad;
+}
+
+ul,
+ol {
+  margin-bottom: $sm-pad;
+  padding-left: $xl-pad;
+  vertical-align: baseline;
+}
+
+caption {
+  padding: $sm-pad 0;
+}
+
+table {
+  margin-bottom: $md-pad;
+}
+
+th,
+td {
+  text-align: left;
+  padding: $md-pad;
+  vertical-align: inherit;
+  border: 0;
+}

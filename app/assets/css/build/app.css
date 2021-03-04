@@ -1,0 +1,198 @@
+*, html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 110%;
+  margin: 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 2rem 0 1rem;
+}
+
+a, a:active, a:visited {
+  color: #118080;
+}
+
+button {
+  font-size: 90%;
+  background-color: #f1f1f1;
+  background-image: linear-gradient(#f5f5f5, #eee);
+  border: 1px solid #ccc;
+  padding: 0.2rem 0.7rem;
+  cursor: pointer;
+  height: 30px;
+  min-width: 50px;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background-color: #fafafa;
+  background-image: linear-gradient(#eee, #ddd);
+}
+
+button:active {
+  background-color: #dfdfdf;
+  background-image: linear-gradient(#ddd, #ccc);
+}
+
+button.disabled {
+  background-color: #dfdfdf;
+  background-image: linear-gradient(#ddd, #ccc);
+}
+
+button.disabled:active {
+  border-color: red;
+}
+
+img[src="/img/spinner.svg"] {
+  height: 100%;
+}
+
+label {
+  font-size: 90%;
+  color: #666;
+  margin-bottom: 0.3rem;
+}
+
+form {
+  margin-bottom: 2rem;
+}
+
+form p {
+  margin-bottom: -0.2rem;
+}
+
+input[type=text], input[type=password], input[type=email], textarea, #card-element {
+  border: 2px solid #dfdfdf;
+  padding: 6px 7px;
+  width: 100%;
+  max-width: 400px;
+  font-size: 100%;
+}
+
+textarea {
+  height: 220px;
+  max-width: 600px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  transition: all 0.2 ease;
+  background-color: white;
+  opacity: 0.98;
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 2px 2px 14px -5px rgba(0, 0, 0, 0.75);
+}
+
+nav div:first-child {
+  flex-grow: 1;
+  text-align: left;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav a.navlink {
+  margin: 0 1.618rem;
+  transition: all 0.3s ease;
+  padding: 0.1rem 0.3rem;
+  border-bottom: 2px solid white;
+}
+
+nav a.navbar-homelink {
+  outline: none;
+}
+
+nav a.navbar-homelink img {
+  height: 40px;
+}
+
+nav a.navbar-homelink img.navbar-logo-text {
+  height: 24px;
+  position: relative;
+  bottom: 4px;
+  left: 1px;
+}
+
+nav a.navlink.active-link, nav a.navlink:hover {
+  border-bottom: 2px solid #118080;
+}
+
+body.home div.main {
+  max-width: none;
+  margin: none;
+}
+
+div.main {
+  margin: 0 auto;
+  padding: 4.5rem 0 2rem;
+  max-width: 750px;
+  background-color: white;
+}
+
+div.main :target::before {
+  content: "";
+  display: block;
+  height: 100px;
+  margin-top: -100px;
+}
+
+pre, code {
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  background-color: #f6f8fa;
+  border-radius: 5px;
+  padding: 16px;
+  overflow: auto;
+  font-size: 90%;
+  line-height: 1.45;
+  border: 1px solid #dfdfdf;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+code {
+  padding: 1px 3px;
+}
+
+pre code {
+  border: none;
+  padding: 0;
+  border-radius: none;
+}
+
+@media screen and (max-width: 760px) {
+  div.main {
+    padding: 4.5rem 10px 2rem;
+  }
+
+  body.home div.main {
+    padding: 3rem 0 2rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  nav a.navbar-homelink img.navbar-logo-text {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=app.css.map */
