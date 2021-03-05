@@ -17,24 +17,19 @@ module.exports = async function($) {
         <header>
           <nav>
             <div>
-              <a class="navbar-homelink" href="/">
-                <img class="navbar-logo-badge" src="/img/waveorb-badge.svg" alt="Waveorb badge">
-                <img class="navbar-logo-text" src="/img/waveorb-textonly.svg" alt="Waveorb header">
+              <a href="${$.link('index')}" title="Home page">
+                <img src="/img/waveorb-sideways.svg" style="max-height:23px">
               </a>
             </div>
             <div>
-              <a class="navlink" href="/about.html">about</a>
-              <a class="navlink" href="/docs.html">docs</a>
+              <a href="${$.link('docs')}" title="Documentation">docs</a>
+              <a href="${$.link('about')}" title="About page">about</a>
+              <a href="https://github.com/eldoy/waveorb" title="Source Code">code &raquo;</a>
+
             </div>
-            <script>
-              document.querySelectorAll('nav a').forEach(function(a) {
-                if (a.pathname == location.pathname) {
-                  a.classList.add('active-link')
-                }
-              })
-            </script>
           </nav>
         </header>
+        <script>setActiveLink()</script>
         <main>${$.page.content}</main>
       </body>
     </html>

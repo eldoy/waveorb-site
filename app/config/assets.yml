@@ -1,3 +1,5 @@
 bundle:
+  js:
+    - /js/app.js
   css:
     - /css/build/app.css
