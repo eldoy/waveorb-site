@@ -8,43 +8,31 @@ Creating a JSON API with Waveorb server actions is very easy and should be famil
 
 AJAX, uploads and websockets all connect to the actions in the same way. This is how an action may look:
 ```js
-// Add your actions to this object
-const actions = {}
-
-// The action name can be whatever you want
-actions.createProjectAsAdmin = {
-
-  // Filters are run in the order you define them
-  filters: ['user', 'admin'],
-
-  // Before is being run after the filters and before validation
+module.exports = {
+  filters: ['authenticate', 'login-required'],
   before: async function($) {
     console.log('Before validation')
   },
-
-  // Validations for parameters
-  validation: {
-    data: {
-      name: {
+  validate: {
+    values: {
+      project_id: {
+        is: '$id',
+        required: true
+      },
+      content: {
+        minlength: 3,
         required: true
       }
     }
-  }
-
-  // Main is being run after validation
-  main: async function($) {
-    // Send result by return or put in '$.result'
-    $.result = await $.app.db('project').insert($.params.data)
   },
-
-  // After is being run after the main function
+  main: async function($) {
+    const { values = {} } = $.params
+    return await $.app.db('comment').create(values)
+  },
   after: async function($) {
-    console.log('Request done')
+    console.log('Request done!')
   }
 }
-
-// Export the action object so Waveorb can pick it up
-module.exports = actions
 ```
 First filters are run, then before, validations, main and after. In any of the functions you can add to the orb object `$` for use later. Adding to the special `$.result` will return the value of that property, unless you do a return or throw before that.
 
@@ -55,8 +43,8 @@ Most of the time we need to validate the parameters sent to a server action. Her
 
 ```js
 // This is the name of the parameter
-data: {
-  // Run validations on data values
+query: {
+  // Run validations on specified values
   name: {
     required: true, // this means can not be undefined
     eq: 5,          // Equal to
@@ -93,7 +81,7 @@ data: {
 }
 ```
 
-If the data doesn't validate, an error message is returned. Have a look at [the default translations](/doc/locales.html#default-translations) for a complete list of the messages.
+If the any of the validations doesn't pass, an error message is returned. Have a look at [the default translations](/doc/locales.html#default-translations) for a complete list of the messages.
 
 The error message then looks like this, with each failing field and errors as an array:
 ```js
@@ -102,19 +90,17 @@ The error message then looks like this, with each failing field and errors as an
 
 ### Full usage example
 
-In `app/actions` create a file called `user-actions.js` with the following content:
+In `app/actions/project` create a file called `create.js` with the following content:
 ```js
-const actions = {}
-actions.userCreate = {
+module.exports = {
   validate: {
-    data: {
-      email: {
-        is: '$email'
+    values: {
+      title: {
+        required: true
       }
     }
   },
   main: async function($) {
-    // Handle password reset here
     return { status: 'OK' }
   }
 }
@@ -122,11 +108,11 @@ actions.userCreate = {
 
 Then in one of your [app's pages](/doc/pages.html) use this HTML:
 ```html
-<form onsubmit="handleSubmit(this); return false">
-  <label for="email">Enter your email</label>
-  <input id="email" type="text" name="email">
-  <div class="error error-email"></div>
-  <button>Submit</button>
+<form onsubmit="return false">
+  <label for="title">Title</label>
+  <input id="title" type="text" name="title">
+  <em class="error-title"></em>
+  <button onclick="handleSubmit(this)">Save</button>
 </form>
 
 <script>
@@ -136,10 +122,10 @@ var api = waveorb('https://waveorb.com/api')
 // Define your submit function
 function handleSubmit(form) {
   // Using the Haka form serializer to gather the data
-  var data = serialize(form)
+  var values = serialize(form)
 
   // Send the data to the action
-  var result = await api('createUser', { data })
+  var result = await api({ action: 'project/create', values })
   if (result.error) {
     // Join all the errors and display under the right input
     Object.keys(result.data).forEach(function(key) {
@@ -147,8 +133,82 @@ function handleSubmit(form) {
     })
   } else {
     // Redirect to login
-    window.location = '/login.html'
+    window.location = '/projects.html'
   }
 }
 </script>
 ```
+
+### Default actions
+
+By default Waveorb comes with default actions built in so you can start development without worrying about your API design. The default actions are described below.
+
+#### Create
+```js
+module.exports = {
+  main: async function($) {
+    const { values = {} } = $.params
+    return await $.app.db('model').create(values)
+  }
+}
+```
+
+#### Update
+```js
+module.exports = {
+  main: async function($) {
+    const { query = {}, values = {} } = $.params
+    return await $.app.db('model').update(query, values)
+  }
+}
+```
+
+#### Get
+```js
+module.exports = {
+  main: async function($) {
+    const { query = {}, fields = {} } = $.params
+    return await $.app.db('model').get(query)
+  }
+}
+```
+
+#### Find
+```js
+module.exports = {
+  main: async function($) {
+    const { query = {}, fields = {}, sort = {}, skip = 0, limit = 0 } = $.params
+    return await $.app.db('model').find(query, { fields, sort, skip, limit })
+  }
+}
+```
+
+#### Count
+```js
+module.exports = {
+  main: async function($) {
+    const { query = {} } = $.params
+    return { n: await $.app.db('model').count(query) }
+  }
+}
+```
+
+#### Delete
+```js
+async function($) {
+  const { query = {} } = $.params
+  return await $.app.db('model').delete(query)
+}
+```
+
+The `model` is automatically replaced with the name of the directory your action file lives in.
+
+To set up your backend using default actions simply create an empty action file. If need to save your projects, create an empty file called `create.js` in `app/actions` and it just works.
+
+Once you need to customize your backend, just write your own actions to replace the default ones.
+
+### Using Waveorb with web hooks
+
+If you need to use Waveorb actions without the Waveorb client you can access your access via URL too. If you action is in `app/actions/project/create.js`, you can access it via the URL `/api/project/create` using a `POST` request.
+
+In development testing you remove the `/api` to make it just `/project/create`.
