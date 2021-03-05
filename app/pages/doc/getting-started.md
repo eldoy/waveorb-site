@@ -38,3 +38,5 @@ There are also other special folders you can add:
 * `app/mail` - mail views
 * `app/middleware` - server middleware
 * `app/plugins` - app libs and functions
+
+The default installation comes with scripts and [scss](https://sass-lang.com) installed by default. Check out the `package.json` file and set it up how you like it.
