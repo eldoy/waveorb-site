@@ -203,12 +203,12 @@ async function($) {
 
 The `model` is automatically replaced with the name of the directory your action file lives in.
 
-To set up your backend using default actions simply create an empty action file. If need to save your projects, create an empty file called `create.js` in `app/actions` and it just works.
+To set up your backend using default actions simply create an empty action file. If you need to save your data, create an empty file called `create.js` in `app/actions` and it just works.
 
 Once you need to customize your backend, just write your own actions to replace the default ones.
 
 ### Web hooks
 
-If you need to use Waveorb actions without the Waveorb client you can access your access via URL too. If you action is in `app/actions/project/create.js`, you can access it via the URL `/api/project/create` using a `POST` request.
+If you need to use Waveorb actions without the Waveorb client you can access your actions via URL too. If your action is in `app/actions/project/create.js`, you can access it via the URL `/api/project/create` using a `POST` request.
 
 In development testing you remove the `/api` to make it just `/project/create`.
