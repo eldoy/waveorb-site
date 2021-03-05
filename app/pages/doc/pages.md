@@ -24,7 +24,7 @@ You can [set the layout](/doc/layout.html) of the page with `$.page.layout = 'na
 
 The orb object `$` also contains the `$.page.name` property, which is the name of the current page you're on. It can be used together with `$.page.name` to determine the link of the current page and language:
 ```js
-`<a href="${ $.link($.page.name) }">`
+`<a href="${$.link($.page.name)}">`
 ```
 
 ### Page routes
@@ -74,13 +74,13 @@ module.exports = async function($) {
     <p>
       This is your home page.
       <!-- Call the shared function, happens on the server -->
-      ${ shared() }
-      ${ serverOnly() }
+      ${shared()}
+      ${serverOnly()}
     </p>
     <script>
       // This will embed the functions in the HTML
-      ${ browserOnly }
-      ${ shared }
+      ${browserOnly}
+      ${shared}
 
       // You can then call the functions
       browserOnly()
@@ -130,7 +130,7 @@ module.exports = async function($) {
   return /* html */`
     <h1>Contact form</h1>
     <!-- Insert form component -->
-    ${ await contactForm($) }
+    ${await contactForm($)}
   `
 }
 ```
@@ -147,6 +147,29 @@ module.exports = async function($, { name, email }) {
   // Use the props
   return `Name: ${name}<br>Email: ${email}`
 }
+```
+
+### Markdown support
+
+You can also use [markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) for your pages. This is a very nice option if you don't need a backend like for writing articles or static pages. In `app/pages` simply add a file ending in `.md`, for example `article.md`:
+
+```markdown
+# Article title
+
+This is the articles content.
+```
+
+It will be converted to HTML automatically. Code snippets will be automatically syntax highlighted using [Prism](https://prismjs.com), just make sure you add the Prism CSS file to `app/assets/css` to make it work.
+
+The title of the generated HTML page will be the same as the markdown file name. You can also add some data to the top of your Markdown file to override this:
+```markdown
+---
+title: The new article title
+description: Meta description for this article
+---
+# Article title
+
+This is the articles content.
 ```
 
 ### Cookies

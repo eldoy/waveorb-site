@@ -207,7 +207,7 @@ To set up your backend using default actions simply create an empty action file.
 
 Once you need to customize your backend, just write your own actions to replace the default ones.
 
-### Using Waveorb with web hooks
+### Web hooks
 
 If you need to use Waveorb actions without the Waveorb client you can access your access via URL too. If you action is in `app/actions/project/create.js`, you can access it via the URL `/api/project/create` using a `POST` request.
 
