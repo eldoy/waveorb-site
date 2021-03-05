@@ -24,7 +24,7 @@ module.exports = async function($) {
             <div>
               <a href="${$.link('docs')}" title="Documentation">docs</a>
               <a href="${$.link('about')}" title="About page">about</a>
-              <a href="https://github.com/eldoy/waveorb" title="Source Code">code &raquo;</a>
+              <a href="https://github.com/eldoy/waveorb" title="Source Code">code</a>
             </div>
           </nav>
         </header>

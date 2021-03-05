@@ -888,14 +888,14 @@ body > header {
 body > header nav {
   display: flex;
   align-items: stretch;
-  padding: 0 2rem;
+  padding: 0;
 }
 body > header nav div:last-child {
   flex-grow: 1;
   text-align: right;
 }
 body > header nav a {
-  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 a.active {

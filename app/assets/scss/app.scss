@@ -17,13 +17,13 @@ body > header {
   nav {
     display: flex;
     align-items: stretch;
-    padding: 0 2rem;
+    padding: 0;
     div:last-child {
       flex-grow: 1;
       text-align: right;
     }
     a {
-      margin-left: 1rem;
+      margin-right: 1rem;
     }
   }
 }
