@@ -18,14 +18,13 @@ module.exports = async function($) {
           <nav>
             <div>
               <a href="${$.link('index')}" title="Home page">
-                <img src="/img/waveorb-sideways.svg" style="max-height:23px">
+                <img src="/img/waveorb-sideways.svg" style="max-height:23px" alt="waveorb home logo">
               </a>
             </div>
             <div>
               <a href="${$.link('docs')}" title="Documentation">docs</a>
               <a href="${$.link('about')}" title="About page">about</a>
               <a href="https://github.com/eldoy/waveorb" title="Source Code">code &raquo;</a>
-
             </div>
           </nav>
         </header>
