@@ -18,7 +18,7 @@ module.exports = async function($) {
           <nav>
             <div>
               <a href="${$.link('index')}" title="Home page">
-                <img src="/img/waveorb-sideways.svg" height="23" width="130" alt="waveorb home logo">
+                <img src="/img/waveorb-sideways.svg" height="56" width="146" alt="waveorb home logo">
               </a>
             </div>
             <div>
