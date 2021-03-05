@@ -26,6 +26,9 @@ module.exports = async function($) {
       .action {
         margin-bottom: 4rem;
       }
+      h3 {
+        margin-top: 2rem;
+      }
     </style>
     <div class="intro">
       <img src="/img/waveorb-logo-full.svg" alt="waveorb-logo" height="223" width="584">
