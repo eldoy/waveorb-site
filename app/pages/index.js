@@ -38,6 +38,8 @@ module.exports = async function($) {
       </div>
       <div class="github-links">
         <a href="https://github.com/eldoy/waveorb" title="Source Code">Source Code</a>
+        &nbsp; | &nbsp;
+        <a href="https://github.com/eldoy/waveorb/issues" title="Report Issue">Report Issue</a>
       </div>
     </div>
     <div class="why">
