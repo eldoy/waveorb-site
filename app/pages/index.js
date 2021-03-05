@@ -28,13 +28,13 @@ module.exports = async function($) {
       }
     </style>
     <div class="intro">
-      <img src="/img/waveorb-logo-full.svg" alt="waveorb-logo" height="174" style="min-height:174px">
+      <img src="/img/waveorb-logo-full.svg" alt="waveorb-logo" height="223" width="584">
       <h1>Create incredible applications</h1>
       <p>
         Javascript Jamstack web app development framework.
       </p>
       <div class="github">
-        <img src="/img/github-badge.svg" alt="Github badge">
+        <img src="/img/github-badge.svg" alt="Github badge" width="32" height="32">
       </div>
       <div class="github-links">
         <a href="https://github.com/eldoy/waveorb" title="Source Code">Source Code</a>
