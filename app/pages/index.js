@@ -28,7 +28,7 @@ module.exports = async function($) {
       }
     </style>
     <div class="intro">
-      <img src="/img/waveorb-logo-full.svg" alt="waveorb-logo" height="174">
+      <img src="/img/waveorb-logo-full.svg" alt="waveorb-logo" height="174" style="min-height:174px">
       <h1>Create incredible applications</h1>
       <p>
         Javascript Jamstack web app development framework.
