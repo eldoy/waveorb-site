@@ -43,7 +43,7 @@ module.exports = async function($) {
       </div>
     </div>
     <div class="why">
-      <h1>Why use Waveorb?</h1>
+      <h2>Why use Waveorb?</h2>
       <h3>Speed and availability</h3>
       <p>
         Go serverless with pre-built static HTML pages, fully Jamstack compliant.
