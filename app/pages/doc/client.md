@@ -106,7 +106,7 @@ socket.on('message', (data, event) => {
   console.log('Received message', data)
 })
 
-// Send data to the 'project/create' action and wait for response
+// Send values to the 'project/create' action and wait for response
 var result = await socket({
   action: 'project/create',
   values: { name: 'Festival' }
@@ -119,7 +119,7 @@ The action name and parameters in the client matches the server action name and 
 // app/actions/project/create.js
 module.exports = {
   main: async function($) {
-    // The data params will be validated like this
+    // The values parameter will be validated like this
     validate: {
       values: {
         name: {
@@ -128,13 +128,16 @@ module.exports = {
       }
     },
     main: async function($) {
-      // The data is available in params:
-      $.params.data
+      // The values parameter is available in $.params:
+      $.params.values
+
+      // Extract like this
+      const { values } = $.params
     }
   }
 }
 ```
-then the client will run the action on the server like this and validate the `data` parameter:
+then the client will run the action on the server like this and validate the `values` parameter:
 ```js
 await api({
   action: 'project/create',
