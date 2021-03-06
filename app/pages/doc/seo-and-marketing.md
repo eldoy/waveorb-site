@@ -41,8 +41,8 @@ module.exports = async function($) {
 
 In your layout use the $.page object values:
 ```js
-`<title>${ $.page.title || 'Fallback if no title set' }</title>`
-`<meta name="description" content="${ $.page.description || 'Fallback description' }">`
+`<title>${$.page.title || 'Fallback if no title set'}</title>`
+`<meta name="description" content="${$.page.description || 'Fallback description'}">`
 ```
 
 The title and meta descripton are what users see when they do an organic search so it's very important that they are relevant so the user clicks your link. Organic search clicks are free and high quality.

@@ -83,8 +83,8 @@ routemap:
 
 To make links work properly based on the current language, use the `$.link` function. It takes the name of the page:
 ```js
-`<a href="${ $.link('index') }>`
-`<a href="${ $.link('about') }>`
+`<a href="${$.link('index')}>`
+`<a href="${$.link('about')}>`
 ```
 
 The HTML above will give you this:
@@ -100,12 +100,12 @@ The HTML above will give you this:
 
 You can force the language like this:
 ```js
-`<a href="${ $.link('es@index') }>`
+`<a href="${$.link('es@index')}>`
 ```
 
 If your link is dynamic, use this syntax:
 ```js
-`<a href="${ $.link('es@_day/_month/', '05', '12') }>`
+`<a href="${$.link('es@_day/_month/', '05', '12')}>`
 ```
 
 which will give you this:
@@ -115,9 +115,9 @@ which will give you this:
 
 The links can also include parameters and hash:
 ```js
-`<a href="${ $.link('es@index?page=hello') }>`
-`<a href="${ $.link('es@index#about') }>`
-`<a href="${ $.link('es@index?page=hello&_id=1#about') }>`
+`<a href="${$.link('es@index?page=hello')}>`
+`<a href="${$.link('es@index#about')}>`
+`<a href="${$.link('es@index?page=hello&_id=1#about')}>`
 ```
 
 ### Default translations

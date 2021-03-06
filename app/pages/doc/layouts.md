@@ -15,13 +15,13 @@ module.exports = async function($) {
   return /* html */`
     <!doctype html>
     <!-- Set the language, default language is 'en' (English) -->
-    <html lang="${ $.lang }">
+    <html lang="${$.lang}">
       <head>
         <!-- Meta tags go here -->
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
         <!-- Set the page title with fallback -->
-        <title>${ $.page.title || '♥' } - Waveorb</title>
+        <title>${$.page.title || '♥'} - Waveorb</title>
 
         <!-- Stylesheets and favicon from assets -->
         <link rel="stylesheet" href="/css/app.css" type="text/css">
@@ -30,7 +30,7 @@ module.exports = async function($) {
       <body>
 
         <!-- The page content will be shown here -->
-        <div class="main">${ $.page.content }</div>
+        <div class="main">${$.page.content}</div>
 
         <!-- Add scripts here -->
         <script src="/js/app.js"></script>

@@ -40,7 +40,7 @@ You can also have routes share the same page which is very convenient if you wan
 ### HTML
 Create HTML tags using template literals, or include your own template library.
 ```js
-`<div>Hello ${ name }</div>`
+`<div>Hello ${name}</div>`
 ```
 
 You don't really need a HTML DOM library, but the examples uses [Haka,](/doc/haka.html) where you can find and manipulate HTML elements with `html`, `text`, `q` and `qa`, as well as cookie and form handling functions.
@@ -102,11 +102,11 @@ const items = ['Milk', 'Meat', 'Butter']
 
 // Create the list component
 function list(items) {
-  return `<ul>${ items.map(item => `<li>${ item }</li>`) }</ul>`
+  return `<ul>${items.map(item => `<li>${item}</li>`)}</ul>`
 }
 
 // Use the list component somewhere else
-`<div>${ list(items) }</div>`
+`<div>${list(items)}</div>`
 
 // Will give you this
 <div><ul><li>Milk</li><li>Meat</li><li>Butter</li></ul></div>

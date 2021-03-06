@@ -24,10 +24,10 @@ bundle:
 Then in your layout, usually `app/layouts/default.js`, use the `$.script` and `$.style` functions:
 ```js
 // For Javascript
-${ $.script('/bundle.js') }
+${$.script('/bundle.js')}
 
 // For CSS
-${ $.style('/bundle.css') }
+${$.style('/bundle.css')}
 ```
 
 This will produce a list of HTML tags in the order you specified if you are in development, or a single tag if you are in production mode or running a build:
@@ -49,8 +49,8 @@ When you run `waveorb build` the build script will send a special header called 
 
 You can also use the `script` and `style` functions instead of HTML tags as a convenience:
 ```js
-${ $.script('/js/app.js') }
-${ $.style('/css/app.css') }
+${$.script('/js/app.js')}
+${$.style('/css/app.css')}
 ```
 
 Will give you this HTML markup:
@@ -59,10 +59,10 @@ Will give you this HTML markup:
 <link href="/css/app.css" rel="stylesheet" type="text/css">
 ```
 
-It also works for multiple assets, although none of these will be compressed or bundled:
+It also works for multiple assets:
 ```js
-${ $.script('/js/haka.js', '/js/waveorb.js', '/js/app.js') }
-${ $.style('/css/reset.css', '/css/app.css') }
+${$.script('/js/haka.js', '/js/waveorb.js', '/js/app.js')}
+${$.style('/css/reset.css', '/css/app.css')}
 ```
 
 This will create tags for all of them in the order specified.

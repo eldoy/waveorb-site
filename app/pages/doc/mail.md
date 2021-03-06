@@ -44,7 +44,7 @@ module.exports = async function(mail, $, data) {
     <html>
       <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
-        <title>${ mail.options.subject || 'Waveorb support' }</title>
+        <title>${mail.options.subject || 'Waveorb support'}</title>
         <style>
           <!-- Styles have go here or inline for mails-->
           body {
@@ -53,7 +53,7 @@ module.exports = async function(mail, $, data) {
         </style>
       </head>
       <body>
-        <div class="content">${ mail.html.content }</div>
+        <div class="content">${mail.html.content}</div>
       </body>
     </html>
   `
@@ -88,12 +88,12 @@ module.exports = async function($, data) {
       // The name of the layout to use in app/layouts
       layout: 'html',
       // The content property of the data parameter
-      content: `<div>You sent this:\n ${ data.message }</div>`
+      content: `<div>You sent this:\n ${data.message}</div>`
     },
     // Text version, without HTML
     text: {
       layout: 'text',
-      content: `You sent this:\n ${ data.message }`
+      content: `You sent this:\n ${data.message}`
     }
   }
 }

@@ -22,17 +22,17 @@ This is useful if you need to set up different variables for each environment li
 ### HTML embedded variables
 Instead of hard coding variables into your HTML you can use the `$.env` function. It works on the app object and lets you insert any property on it in your HTML:
 ```js
-`<div>${ $.env('app.config.payment.public_key') }</div>`
+`<div>${$.env('app.config.payment.public_key')}</div>`
 ```
 
 ### Built in variables
 Waveorb has a few built in environment variables you can use:
 
-* `WAVEORB_PORT` - sets the app server port, default: `5000`
-* `WAVEORB_HOST` - sets the app server host, default: `http://localhost`
-* `WAVEORB_LANG` - set the default language, default: `en`
-* `WAVEORB_SSL_CERT` - set the location of the SSL certificate
-* `WAVEORB_SSL_KEY` - set the location of the SSL private key
+* __WAVEORB_PORT__ - sets the app server port, default: _5000_
+* __WAVEORB_HOST__ - sets the app server host, default: _http://localhost_
+* __WAVEORB_LANG__ - set the default language, default: _en_
+* __WAVEORB_SSL_CERT__ - set the location of the SSL certificate
+* __WAVEORB_SSL_KEY__ - set the location of the SSL private key
 
 Use them by exporting them to your system:
 ```bash
