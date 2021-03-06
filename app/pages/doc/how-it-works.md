@@ -18,19 +18,19 @@ When you start your app with `waveorb serve`, or if you're using the [nodemon sc
 ### The orb object
 The page function receives a single object, the orb object `$`, which contains all of your built in properties and functions:
 
-* `$.app` - Your entire app as an object
-* `$.params` - Parameters you sent from the client
-* `$.query` - Query parameters from the URL
-* `$.files` - Uploaded files as an array
-* `$.req` - Request object, a NodeJS [http.ServerResponse instance](https://nodejs.org/api/http.html#http_class_http_serverresponse)
-* `$.res` - Response object, a NodeJS [http.ClientRequest instance](https://nodejs.org/api/http.html#http_class_http_clientrequest)
-* `$.socket` - Socket object from the [ws project](https://github.com/websockets/ws)
-* `$.server` - Underlying [server object](https://github.com/eldoy/sirloin)
-* `$.tools` - Built in [tools you may need](https://github.com/eldoy/extras)
-* `$.lang` - The request language like `en` or `no`, two character ISO code.
-* `$.link` - Link translation function
-* `$.t` - Language translation function
-* `$.env` - Environment variable substitution
+* __$.app__ - Your entire app as an object
+* __$.params__ - Parameters you sent from the client
+* __$.query__ - Query parameters from the URL
+* __$.files__ - Uploaded files as an array
+* __$.req__ - Request object, a NodeJS [http.ServerResponse instance](https://nodejs.org/api/http.html#http_class_http_serverresponse)
+* __$.res__ - Response object, a NodeJS [http.ClientRequest instance](https://nodejs.org/api/http.html#http_class_http_clientrequest)
+* __$.socket__ - Socket object from the [ws project](https://github.com/websockets/ws)
+* __$.server__ - Underlying [server instance](https://github.com/eldoy/sirloin)
+* __$.tools__ - Built in [tools you may need](https://github.com/eldoy/extras)
+* __$.lang__ - The request language like _en_ or _no_, two character ISO code.
+* __$.link__ - Link translation function
+* __$.t__ - Language translation function
+* __$.env__ - Environment variable substitution
 
 Anything you add to the orb object `$` will be available later. For example, the `$.page.title` will be available in your layout. Later we will show how it is also used with filters, actions and plugins.
 
