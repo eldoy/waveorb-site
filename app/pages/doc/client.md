@@ -178,7 +178,7 @@ Options for accept types and selecting multiple files can be be specified like t
 var urls = await api(
   { action: 'upload/create' },
   {
-    files: input.files
+    files: input.files,
 
     // Multiple files
     multiple: true,
