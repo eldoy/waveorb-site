@@ -26,17 +26,17 @@ Open [http://localhost:5000](http://localhost:5000) in a new tab to view your ap
 
 Now open your app folder in your favorite editor and have a look. Most of the folders can be deleted depending on your needs.
 
-* `app/assets` - javascript, css and images
-* `app/config` - config, settings and options
-* `app/layouts` - page and mail layouts
-* `app/pages` - HTML and markdown pages
+* __app/assets__ - javascript, css and images
+* __app/config__ - config, settings and options
+* __app/layouts__ - page and mail layouts
+* __app/pages__ - HTML and markdown pages
 
 There are also other special folders you can add:
-* `app/actions` - server API actions
-* `app/filters` - filters for server actions
-* `app/locales` - language translations
-* `app/mail` - mail views
-* `app/middleware` - server middleware
-* `app/plugins` - app libs and functions
+* __app/actions__ - server API actions
+* __app/filters__ - filters for server actions
+* __app/locales__ - language translations
+* __app/mail__ - mail views
+* __app/middleware__ - server middleware
+* __app/plugins__ - app libs and functions
 
-The default installation comes with scripts and [scss](https://sass-lang.com) installed by default. Check out the `package.json` file and set it up how you like it.
+The default installation comes with scripts and [scss](https://sass-lang.com) installed by default. Open the `package.json` file and fill in your app's fields.
