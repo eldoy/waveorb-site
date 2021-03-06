@@ -10,10 +10,11 @@ npm i waveorb-client
 
 ### Usage
 
-For use in the browser, copy the `/dist/waveorb-min.js` file to `app/assets/js` and include it in your layout:
+The waveorb client is included in when you use `waveorb create` to make an application. If you're setting it up from scratch, copy the `/dist/waveorb.js` file to `app/assets/js` and include it in your layout:
 ```html
 <script src="/js/waveorb-min.js"></script>
 ```
+or add it to your `app/config/assets.yml` file to bundle it.
 
 For use on the server or the command line:
 ```js
@@ -22,7 +23,7 @@ const waveorb = require('waveorb-client')
 const api = waveorb('https://example.com/api')
 ```
 
-The `/api` at the end is used if you used the `waveorb install` command to set up your VPS server.
+The `/api` at the end is used if you used [waveorb server](https://github.com/eldoy/waveorb-server) to set up your production server.
 
 Import the Waveorb client like this if you're using Webpack:
 ```js
@@ -56,16 +57,10 @@ var api = waveorb('http://localhost:5000')
 var api = waveorb('https://localhost:5000')
 
 // Send through http
-var result = await api.action(
-  'createProject',
-  {
-    data: {
-      values: {
-        name: 'Celebration'
-      }
-    }
-  }
-)
+var result = await api({
+  action: 'project/create',
+  values: { name: 'Celebration' }
+})
 ```
 
 ### Websockets
@@ -111,27 +106,22 @@ socket.on('message', (data, event) => {
   console.log('Received message', data)
 })
 
-// Send data to the 'createProject' action and wait for response
-var result = await socket.action(
-  'createProject',
-  {
-    data: {
-      values: {
-        name: 'Festival'
-      }
-    }
-  }
-)
+// Send data to the 'project/create' action and wait for response
+var result = await socket({
+  action: 'project/create',
+  values: { name: 'Festival' }
+})
 ```
 
 ### Connecting client and server
 The action name and parameters in the client matches the server action name and validation. If your server action looks like this:
 ```js
-{
-  createProject: {
+// app/actions/project/create.js
+module.exports = {
+  main: async function($) {
     // The data params will be validated like this
     validate: {
-      data: {
+      values: {
         name: {
           is: '$string'
         }
@@ -146,37 +136,53 @@ The action name and parameters in the client matches the server action name and 
 ```
 then the client will run the action on the server like this and validate the `data` parameter:
 ```js
-await api.action('createProject', { data: { name: 'Hello' } })
+await api({
+  action: 'project/create',
+  values: { name: 'Hello' }
+})
 ```
 
 ### Uploads
 
-Uploads are dead simple. Just attach it to a click event in the browser:
+Uploads are dead simple. Just attach it to a click event in the browser and pass the upload input's files as options:
 ```js
+// Upload from browser
 function handleUpload() {
-  // Upload from browser
-  var urls = await api.upload('createProject')
+  var input = q('input[type="file"]')
+  var urls = await api(
+    { action: 'upload/create' },
+    { files: input.files }
+  )
 }
 `<button onclick="handleUpload()">`
 ```
 
 A file upload dialog will be automatically created in the background. To track the progress, do this:
 ```js
-var urls = await api.upload('createProject', {}, {
-  progress: function(event) {
-    var { loaded, total, percent } = event
+var urls = await api(
+  { 'upload/create' },
+  {
+    files: input.files,
+    progress: function(event) {
+      var { loaded, total, percent } = event
+    }
   }
-})
+)
 ```
 
-The arguments for the upload function is `action name`, `parameters` and `options`. Options for accept types and selecting multiple files can be be specified like this:
+Options for accept types and selecting multiple files can be be specified like this:
 ```js
-var urls = await api.upload('createProject', {}, {
-  // Multiple files
-  multiple: true,
+var urls = await api(
+  { action: 'upload/create' },
+  {
+    files: input.files
 
-  // Only images
-  accept: 'image/*'
+    // Multiple files
+    multiple: true,
+
+    // Only images
+    accept: 'image/*'
+  }
 })
 ```
 
@@ -192,11 +198,11 @@ const waveorb = require('waveorb-client')
 const api = waveorb('https://example.com/api')
 
 // Use the files option to upload to your server
-const urls = await api.upload('createProject', {}, {
-  files: ['app/assets/file.png']
-})
+const urls = await api(
+  { 'upload/create' },
+  { files: ['app/assets/file.png'] }
+)
 ```
-
 You can upload multiple files by adding more names to the files array.
 
 ### CDN, thumbnails and resize
@@ -223,6 +229,9 @@ await dugg.convert($.files, config)
 
 // Upload files to CDN
 const urls = await dugg.upload($.files)
+
+// Or alternatively in one line
+const urls = await dugg.upload($.files, config)
 
 // Return URLs to client
 return urls
