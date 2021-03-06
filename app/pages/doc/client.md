@@ -163,7 +163,7 @@ function handleUpload() {
 A file upload dialog will be automatically created in the background. To track the progress, do this:
 ```js
 var urls = await api(
-  { 'upload/create' },
+  { action: 'upload/create' },
   {
     files: input.files,
     progress: function(event) {
@@ -202,7 +202,7 @@ const api = waveorb('https://example.com/api')
 
 // Use the files option to upload to your server
 const urls = await api(
-  { 'upload/create' },
+  { action: 'upload/create' },
   { files: ['app/assets/file.png'] }
 )
 ```
