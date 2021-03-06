@@ -27,7 +27,7 @@ Installing a server ready for Waveorb is incredibly easy. We have created a scri
 * Public Key authentication
 * Firewall (UFW)
 
-Read about [how to boot a Waveorb server here.](https://github.com/eldoy/waveorb-server)
+Read about [how to boot a Waveorb server here.](https://github.com/eldoy/waveorb-server#readme)
 
 ### Update
 
