@@ -1,7 +1,5 @@
 ## How it works
 
-Layouts and pages are javascript files that must export an async function that returns a string of HTML.
-
 A minimal page looks like this, stored in the `app/pages` folder:
 ```js
 module.exports = async function($){
@@ -13,9 +11,9 @@ module.exports = async function($){
 ```
 This function returns an HTML string in backticks. These are [Javascript template literals.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) They are a new feature of Javascript ES6 which is what we use to create HTML.
 
-Of course you don't have to use backticks, any string will do, but it is convenient when you want to return HTML. Adding the `/* html /*` comment in front of the backtick will let your editor know it's HTML and add [syntax highlighting.](https://marketplace.visualstudio.com/items?itemName=Tobermory.es6-string-html)
+Of course you don't have to use backticks, any string will do, but it is convenient when you want to return HTML. Adding the `/* html */` comment in front of the backtick will let your editor know it's HTML and add [syntax highlighting.](https://marketplace.visualstudio.com/items?itemName=Tobermory.es6-string-html)
 
-When you start your app with `waveorb serve`, or if you're using the [nodemon script](/doc/getting-started.html) with `npm run serve`, everything in the `app` folder will be [loaded](https://github.com/eldoy/waveorb-core/blob/master/lib/loader.js) into the `app` object.
+When you start your app with `waveorb serve`, or if you're using the [nodemon script](/doc/getting-started.html) with `npm run dev`, everything in the app folder will be loaded into the app object.
 
 ### The orb object
 The page function receives a single object, the orb object `$`, which contains all of your built in properties and functions:
@@ -38,7 +36,7 @@ Anything you add to the orb object `$` will be available later. For example, the
 
 ### Return values
 
-Middleware, filters and server action functions can all return data. If they return an object, string or `false`, execution is halted. If they don't return anything or `undefined`, execution continues.
+Middleware, filters and server action functions can all return data. If they return an object, string or false, execution is halted. If they don't return anything (undefined), execution continues.
 
 ```js
 async function($) {

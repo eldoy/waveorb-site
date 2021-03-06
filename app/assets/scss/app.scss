@@ -1,4 +1,5 @@
 @import 'vcss.scss';
+@import 'prism.scss';
 
 main {
   padding: 0 0 2rem;
@@ -30,6 +31,11 @@ body > header {
 
 a.active {
   text-decoration: underline;
+}
+
+code:not([class]) {
+  background: $highlight;
+  white-space: nowrap;
 }
 
 #flash {

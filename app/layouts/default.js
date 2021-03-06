@@ -10,7 +10,6 @@ module.exports = async function($) {
         <link rel="icon" type="image/png" href="/img/favicon.png">
         ${$.script('/bundle.js')}
         ${$.style('/bundle.css')}
-        <link rel="stylesheet" href="/css/prism.css" type="text/css" media="print" onload="this.media='all'">
         ${process.env.NODE_ENV == 'development' ? $.script('/js/dev.js') : ''}
       </head>
       <body>
