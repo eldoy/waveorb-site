@@ -44,7 +44,7 @@ Most of the time we need to validate the parameters sent to a server action. Her
 ```js
 // This is the name of the parameter
 query: {
-  // Run validations on specified values
+  // Run validations on specified fields
   name: {
     required: true, // this means can not be undefined
     eq: 5,          // Equal to

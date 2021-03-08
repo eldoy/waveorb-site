@@ -1,6 +1,6 @@
 ## How it works
 
-A minimal page looks like this, stored in the `app/pages` folder:
+In the browser (front-end), a minimal page looks like this, stored in the `app/pages` folder:
 ```js
 module.exports = async function($){
   $.page.title = 'Hello world'
@@ -36,7 +36,7 @@ Anything you add to the orb object `$` will be available later. For example, the
 
 ### Return values
 
-Middleware, filters and server action functions can all return data. If they return an object, string or false, execution is halted. If they don't return anything (undefined), execution continues.
+On the server (back-end), middleware, filters and actions return data. If they return an object, string or false, execution is halted and the result is sent back to your page in the browser. If they don't return anything (undefined), execution continues.
 
 ```js
 async function($) {
