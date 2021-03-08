@@ -34,7 +34,7 @@ module.exports = async function($) {
 
         <!-- Add scripts here -->
         <script src="/js/app.js"></script>
-        <script src="/js/haka-min.js"></script>
+        <script src="/js/haka.js"></script>
       </body>
     </html>
   `

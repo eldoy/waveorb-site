@@ -189,4 +189,4 @@ $.req.cookie('name', '', -1)
 cookie('name', 'hello')
 ```
 
-Read more about how to use cookies in the browser on [the Haka page.](/doc/haka.html#cookies)
+Read more about how to use cookies in the browser on [the Haka page.](https://github.com/eldoy/haka#readme)
