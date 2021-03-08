@@ -1,4 +1,3 @@
 {
-  "proxy": "http://localhost:31000",
   "domains": "waveorb.com www.waveorb.com"
 }
