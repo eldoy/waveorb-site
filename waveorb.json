@@ -1,3 +1,5 @@
 {
-  "domains": "waveorb.com www.waveorb.com"
+  "domains": "waveorb.com www.waveorb.com",
+  "sitemap": true,
+  "ping": true
 }
