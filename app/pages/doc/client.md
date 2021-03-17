@@ -30,17 +30,6 @@ Import the Waveorb client like this if you're using Webpack:
 // Include in webpack app
 import waveorb from 'waveorb-client'
 const api = waveorb('http://localhost:5000')
-
-// As Nuxt plugin, in ~/plugins/waveorb.js
-import waveorb from 'waveorb-client'
-export default ({}, inject) => {
-  inject('api', waveorb('http://localhost:5000'))
-}
-
-// In nuxt.config.js
-plugins: [
-  '~/plugins/waveorb.js'
-]
 ```
 It works the exact same way in the browser as on the server, it is isomorphic.
 
@@ -147,7 +136,9 @@ await api({
 
 ### Uploads
 
-Uploads are dead simple. Just attach it to a click event in the browser and pass the upload input's files as options:
+Uploads are dead simple. Just attach it to a click event in the browser and pass the upload input's files as options.
+
+Create the upload handler:
 ```js
 // Upload from browser
 function handleUpload() {
@@ -157,10 +148,14 @@ function handleUpload() {
     { files: input.files }
   )
 }
-`<button onclick="handleUpload()">`
 ```
 
-A file upload dialog will be automatically created in the background. To track the progress, do this:
+Create the HTML input element:
+```html
+<input type="file" onchange="handleUpload()" onclick="this.value=''">
+```
+
+To track the progress, do this:
 ```js
 var urls = await api(
   { action: 'upload/create' },
@@ -173,20 +168,9 @@ var urls = await api(
 )
 ```
 
-Options for accept types and selecting multiple files can be be specified like this:
-```js
-var urls = await api(
-  { action: 'upload/create' },
-  {
-    files: input.files,
-
-    // Multiple files
-    multiple: true,
-
-    // Only images
-    accept: 'image/*'
-  }
-})
+Options for accept types and selecting multiple files can be be specified like this on the input element, as is just standard HTML:
+```html
+<input ... multiple accept="image/*">
 ```
 
 The files will be available in `$.files` on the server:
