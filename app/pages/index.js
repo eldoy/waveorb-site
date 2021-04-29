@@ -1,5 +1,5 @@
 module.exports = async function($) {
-  $.page.title = 'Javascript Jamstack web app development framework'
+  $.page.title = 'Javascript web app development framework'
 
   return /* html */`
     <style>
@@ -34,7 +34,7 @@ module.exports = async function($) {
       <img src="/img/waveorb-logo-full.svg" alt="waveorb-logo" height="223" width="584">
       <h1>Create incredible applications</h1>
       <p>
-        Javascript Jamstack web app development framework.
+        Javascript Web App Development Framework.
       </p>
       <div class="github">
         <img src="/img/github-badge.svg" alt="Github badge" width="32" height="32">

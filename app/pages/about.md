@@ -24,7 +24,7 @@ You can also use any frontend library for your app. [React,](https://reactjs.org
 
 As other frontend libraries evolve, they change their APIs, making your app hard, and expensive, to maintain. In some cases libraries are even abandoned, forcing you to rewrite your app if you want to keep it up to date, which takes time and is costly. With Waveorb it's much easier, the app you made today will only get better as browser technologies evolve.
 
-Since we're running Javascript on the server, Waveorb is isomorphic, meaning you can share code between the server and the browser. You have complete control over what you do on the server, and what you do in the browser. The frontend is run with server side rendering in development, and is built ahead of time as Jamstack compatible static pages for when it goes into production.
+Since we're running Javascript on the server, Waveorb is isomorphic, meaning you can share code between the server and the browser. You have complete control over what you do on the server, and what you do in the browser. The frontend is run with server side rendering in development, and can be built ahead of time as Jamstack compatible static pages for when it goes into production.
 
 _This also makes search engines happy, Waveorb is perfect for SEO._
 
