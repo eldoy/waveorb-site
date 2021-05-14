@@ -7,7 +7,7 @@ module.exports = async function($) {
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Waveorb - Javascript framework for creating incredible web apps">
         <title>${$.page.title || '♥'} - Waveorb</title>
-        <link rel="icon" type="image/png" href="/img/favicon.png">
+        <link rel="icon" type="image/png" href="/img/favicon-new.png">
         ${$.script('/bundle.js')}
         ${$.style('/bundle.css')}
         ${process.env.NODE_ENV == 'development' ? $.script('/js/dev.js') : ''}
@@ -18,7 +18,7 @@ module.exports = async function($) {
           <nav>
             <div>
               <a href="${$.link('index')}" title="Home page">
-                <img src="/img/waveorb-sideways.svg" height="56" width="146" alt="waveorb home logo">
+                <img src="/img/waveorb-new.svg" height="56" width="146" alt="waveorb home logo">
               </a>
             </div>
             <div>

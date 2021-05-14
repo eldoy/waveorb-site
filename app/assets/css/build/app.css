@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap");
 /* Document
  * ========================================================================== */
 /**
@@ -470,14 +471,14 @@ aside {
   }
 }
 body {
-  color: #111;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: #222;
+  font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   line-height: 1.6;
 }
 
 p {
-  margin: 0 0 16px;
+  margin: 0 16px 16px;
 }
 
 h1,
@@ -523,7 +524,7 @@ h6 {
 
 pre {
   background: #fafafa;
-  color: #111;
+  color: #222;
   display: block;
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   font-size: 16px;
@@ -534,7 +535,7 @@ pre {
 }
 
 code {
-  color: #111;
+  color: #222;
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   font-size: 16px;
   line-height: inherit;
@@ -546,12 +547,12 @@ code {
 }
 
 a:not(.button) {
-  color: #44f;
+  color: #074CB2;
   text-decoration: none;
   background-color: transparent;
 }
 a:not(.button):hover, a:not(.button):focus {
-  color: #1111ff;
+  color: #053781;
   text-decoration: underline;
 }
 
@@ -611,14 +612,14 @@ trix-editor,
   background-clip: padding-box;
   border: 1px solid #ccc;
   border-radius: 4px;
-  color: #111;
+  color: #222;
   display: block;
   width: 100%;
   font-size: 1rem;
   padding: 8px 16px;
   line-height: 1.5;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   word-break: normal;
 }
 input:not([type]):focus,
@@ -640,9 +641,9 @@ textarea:focus,
 trix-editor:focus,
 .StripeElement:focus {
   background-color: #fff;
-  border-color: #a2a2ff;
+  border-color: #83a6d9;
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(68, 68, 255, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(7, 76, 178, 0.25);
 }
 input:not([type])[disabled],
 input[type=text][disabled],
@@ -689,9 +690,9 @@ trix-editor[readonly],
 
 .StripeElement--focus {
   background-color: #fff;
-  border-color: #a2a2ff;
+  border-color: #83a6d9;
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(68, 68, 255, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(7, 76, 178, 0.25);
 }
 
 input[type=color] {
@@ -779,9 +780,9 @@ input[type=reset],
 input[type=button],
 button,
 .button {
-  background-color: #efefef;
+  background-color: #F57952;
   border-radius: 4px;
-  color: #111;
+  color: #222;
   padding: 8px 16px;
   display: inline-block;
   font-weight: 400;
@@ -789,7 +790,7 @@ button,
   white-space: nowrap;
   vertical-align: middle;
   user-select: none;
-  border: 1px solid #ccc;
+  border: 1px solid #074CB2;
   font-size: 1rem;
   line-height: 1.5;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -809,7 +810,7 @@ input[type=reset]:hover,
 input[type=button]:hover,
 button:hover,
 .button:hover {
-  background-color: gainsboro;
+  background-color: #f35d2e;
 }
 
 input[type=submit]:not(:disabled):active,
@@ -817,7 +818,7 @@ input[type=reset]:not(:disabled):active,
 input[type=button]:not(:disabled):active,
 button:not(:disabled):active,
 .button:active {
-  background-color: #d6d6d6;
+  background-color: #f25422;
 }
 
 input[type=submit]:focus,
@@ -826,7 +827,7 @@ input[type=button]:focus,
 button:focus,
 .button:focus {
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(68, 68, 255, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(7, 76, 178, 0.25);
 }
 
 input[type=submit]:disabled,
@@ -836,7 +837,7 @@ button:disabled,
 .button.disabled {
   opacity: 0.65;
   cursor: not-allowed;
-  background-color: #efefef;
+  background-color: #F57952;
 }
 
 dl {
@@ -964,6 +965,11 @@ main {
   padding: 0 0 2rem;
   max-width: 600px;
 }
+@media screen and (max-width: 600px) {
+  main {
+    padding: 0 1rem;
+  }
+}
 
 form button ~ a,
 nav a {
@@ -978,11 +984,18 @@ body > header {
 body > header nav {
   display: flex;
   align-items: stretch;
-  padding: 0;
+  padding: 0 1rem;
 }
 body > header nav div:last-child {
   flex-grow: 1;
   text-align: right;
+}
+@media screen and (max-width: 600px) {
+  body > header nav div:last-child {
+    justify-content: flex-end;
+    align-items: center;
+    display: flex;
+  }
 }
 body > header nav a {
   margin-right: 1rem;
