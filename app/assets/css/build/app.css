@@ -478,7 +478,7 @@ body {
 }
 
 p {
-  margin: 0 16px 16px;
+  margin: 0 0 16px;
 }
 
 h1,
@@ -780,7 +780,7 @@ input[type=reset],
 input[type=button],
 button,
 .button {
-  background-color: #F57952;
+  background-color: #F17C57;
   border-radius: 4px;
   color: #222;
   padding: 8px 16px;
@@ -790,7 +790,7 @@ button,
   white-space: nowrap;
   vertical-align: middle;
   user-select: none;
-  border: 1px solid #074CB2;
+  border: 1px solid #F17C57;
   font-size: 1rem;
   line-height: 1.5;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -810,7 +810,7 @@ input[type=reset]:hover,
 input[type=button]:hover,
 button:hover,
 .button:hover {
-  background-color: #f35d2e;
+  background-color: #ee6034;
 }
 
 input[type=submit]:not(:disabled):active,
@@ -818,7 +818,7 @@ input[type=reset]:not(:disabled):active,
 input[type=button]:not(:disabled):active,
 button:not(:disabled):active,
 .button:active {
-  background-color: #f25422;
+  background-color: #ed5728;
 }
 
 input[type=submit]:focus,
@@ -837,7 +837,7 @@ button:disabled,
 .button.disabled {
   opacity: 0.65;
   cursor: not-allowed;
-  background-color: #F57952;
+  background-color: #F17C57;
 }
 
 dl {
@@ -965,11 +965,6 @@ main {
   padding: 0 0 2rem;
   max-width: 600px;
 }
-@media screen and (max-width: 600px) {
-  main {
-    padding: 0 1rem;
-  }
-}
 
 form button ~ a,
 nav a {
@@ -983,7 +978,7 @@ body > header {
 }
 body > header nav {
   display: flex;
-  align-items: stretch;
+  align-items: center;
   padding: 0 1rem;
 }
 body > header nav div:last-child {

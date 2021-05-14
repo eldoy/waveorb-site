@@ -447,7 +447,7 @@ $line: #eaeaea !default;
 $disabled: #fafafa !default;
 $medium: #ccc !default;
 $preserve: #fafafa !default;
-$button: #F57952 !default;
+$button: #F17C57 !default;
 $small: #999 !default;
 
 // Basic stylings
@@ -477,7 +477,7 @@ $button-background-color: $button !default;
 $button-border-radius: $border-radius !default;
 $button-color: $text !default;
 $button-padding: $sm-pad $md-pad !default;
-$button-border: 1px solid $primary !default;
+$button-border: 1px solid $button !default;
 $button-font-size: 1rem !default;
 $button-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 $button-hover-background-color: darken($button, 7.5%) !default;

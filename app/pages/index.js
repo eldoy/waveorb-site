@@ -31,7 +31,7 @@ module.exports = async function($) {
       }
     </style>
     <div class="intro">
-      <img src="/img/waveorb-new.svg" alt="waveorb-logo" height="223" width="584">
+      <img src="/img/waveorb-logo-full.svg" alt="waveorb-logo" height="223" width="584">
       <h1>Create incredible applications</h1>
       <p>
         Javascript Web App Development Framework.
