@@ -19,7 +19,7 @@ module.exports = async function($) {
       }
       .why {
         margin-bottom: 4rem;
-        background: #118080;
+        background: #115277;
         color: white;
         padding: 2rem 0 3rem;
       }
@@ -75,7 +75,7 @@ module.exports = async function($) {
       </p>
     </div>
     <div class="signature">
-      Made in Norway with passion by <a href="https://eldoy.com" title="Eldøy Projects home page">Eldøy Projects</a>
+      Made in Oslo, Norway with passion by <a href="https://eldoy.com" title="Eldøy Projects home page">Eldøy Projects</a>
     </div>
   `
 }

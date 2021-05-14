@@ -435,8 +435,8 @@ summary {
 }
 
 // Colors
-$primary: #44f !default;
-$text: #111 !default;
+$primary: #074CB2 !default;
+$text: #222 !default;
 $white: #fff !default;
 $black: #000 !default;
 $light: #dfdfdf !default;
@@ -447,7 +447,7 @@ $line: #eaeaea !default;
 $disabled: #fafafa !default;
 $medium: #ccc !default;
 $preserve: #fafafa !default;
-$button: #efefef !default;
+$button: #F17C57 !default;
 $small: #999 !default;
 
 // Basic stylings
@@ -467,6 +467,7 @@ $lg-breakpoint: 960px !default;
 $md-breakpoint: 600px !default;
 $sm-breakpoint: 400px !default;
 $xs-breakpoint: 360px !default;
+$xxs-breakpoint: 320px !default;
 
 // Links
 $link-color: $primary !default;
@@ -477,7 +478,7 @@ $button-background-color: $button !default;
 $button-border-radius: $border-radius !default;
 $button-color: $text !default;
 $button-padding: $sm-pad $md-pad !default;
-$button-border: 1px solid $medium !default;
+$button-border: 1px solid $button !default;
 $button-font-size: 1rem !default;
 $button-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 $button-hover-background-color: darken($button, 7.5%) !default;
@@ -503,7 +504,7 @@ $input-invalid-color: $danger !default;
 $input-focus-invalid-outline-color: $danger !default;
 
 // Font
-$sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !default;
+$sans-serif: Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !default;
 $serif: Georgia, Times, 'Times New Roman', serif !default;
 $monospace: Menlo, Monaco, Consolas, 'Courier New', monospace !default;
 $font-family: $sans-serif !default;
@@ -587,7 +588,7 @@ body {
 }
 
 p {
-  margin: 0 0 $md-pad;
+  margin: 0 $md-pad;
 }
 
 h1,
