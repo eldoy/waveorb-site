@@ -467,6 +467,7 @@ $lg-breakpoint: 960px !default;
 $md-breakpoint: 600px !default;
 $sm-breakpoint: 400px !default;
 $xs-breakpoint: 360px !default;
+$xxs-breakpoint: 320px !default;
 
 // Links
 $link-color: $primary !default;
@@ -587,7 +588,7 @@ body {
 }
 
 p {
-  margin: 0 0 $md-pad;
+  margin: 0 $md-pad;
 }
 
 h1,

@@ -478,7 +478,7 @@ body {
 }
 
 p {
-  margin: 0 16px 16px;
+  margin: 0 16px;
 }
 
 h1,
@@ -970,6 +970,12 @@ form button ~ a,
 nav a {
   margin-left: 0.5rem;
 }
+@media screen and (max-width: 600px) {
+  form button ~ a,
+nav a {
+    margin: 0;
+  }
+}
 
 body > header {
   text-align: center;
@@ -980,6 +986,11 @@ body > header nav {
   display: flex;
   align-items: center;
   padding: 0 1rem;
+}
+@media screen and (max-width: 320px) {
+  body > header nav {
+    padding: 0;
+  }
 }
 body > header nav div:last-child {
   flex-grow: 1;
