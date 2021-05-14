@@ -12,7 +12,7 @@ module.exports = async function($) {
         margin-bottom: 3rem;
         max-width: 600px;
         margin: 0 auto;
-        padding: 0 0.5rem 2rem;
+        padding: 0 1rem 2rem;
       }
       .github {
         padding-top: 1.5rem;
