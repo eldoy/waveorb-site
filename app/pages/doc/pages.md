@@ -188,7 +188,7 @@ $.req.cookie('name', '', -1)
 cookie('name', 'hello')
 ```
 
-Read more about how to use cookies in the browser on [the Haka page.](https://github.com/eldoy/haka#readme)
+Read more about how to use cookies in the browser on [the Haka page.](https://github.com/eldoy/haka#cookies)
 
 <div class="nav">
   <div><a href="/doc/middleware.html">&larr; Middleware</a></div>
