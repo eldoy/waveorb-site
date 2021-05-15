@@ -1055,4 +1055,12 @@ code:not([class]) {
   padding: 1rem 0;
 }
 
+.nav {
+  display: flex;
+  margin-top: 2rem;
+}
+.nav div:first-child {
+  flex-grow: 1;
+}
+
 /*# sourceMappingURL=app.css.map */

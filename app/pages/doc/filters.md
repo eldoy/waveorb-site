@@ -42,3 +42,8 @@ module.exports = {
   }
 }
 ```
+
+<div class="nav">
+  <div><a href="/doc/config.html">&larr; Config</a></div>
+  <div><a href="/doc/layouts.html">Layouts &rarr;</a></div>
+</div>

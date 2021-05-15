@@ -94,3 +94,8 @@ Sitemap: https://www.domain.com/sitemap.xml
 ```
 
 Read more about [robots.txt options here.](https://www.robotstxt.org/robotstxt.html)
+
+<div class="nav">
+  <div><a href="/doc/command-line.html">&larr; Command line</a></div>
+  <div><a href="/doc/environment.html">Environment &rarr;</a></div>
+</div>

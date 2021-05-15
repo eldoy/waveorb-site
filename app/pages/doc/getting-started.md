@@ -40,3 +40,8 @@ There are also other special folders you can add:
 * __app/plugins__ - app libs and functions
 
 The default installation comes with scripts and [scss](https://sass-lang.com) installed by default. Open the `package.json` file and fill in your app's fields.
+
+<div class="nav">
+  <div><a href="/docs.html#topics">&larr; Topics</a></div>
+  <div><a href="/doc/how-it-works.html">How it works &rarr;</a></div>
+</div>

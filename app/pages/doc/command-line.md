@@ -135,10 +135,15 @@ and also use a file to describe and generate your application.
 You can read more [about generating here.](https://github.com/eldoy/waveorb-generate)
 
 ### Cmd
-Waveorb comes with its own command line (REPL). It is running the full NodeJS environment, and can be started with `waveorb cmd`. It supports top level await.
+Waveorb comes with its own terminal REPL. It is running the full NodeJS environment, and can be started with `waveorb cmd`. It supports top level await.
 ```bash
-# Start the command line
+# Start the terminal REPL
 waveorb cmd
 ```
 
 Hit `Ctrl + d` or `Ctrl + c` twice to exit.
+
+<div class="nav">
+  <div><a href="/doc/database.html">&larr; Database</a></div>
+  <div><a href="/doc/seo-and-marketing.html">SEO and marketing &rarr;</a></div>
+</div>

@@ -161,3 +161,8 @@ await db.close()
 Any other solution with a NodeJS API works. If you need more advanced querying capabilities then an SQL server might be a good solution. To include them in your app, just follow the install and plugin procedures as outlined above.
 
 Serverless solutions such as [Firebase](firebase.google.com) or [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) will also work nicely with Waveorb.
+
+<div class="nav">
+  <div><a href="/doc/haka.html">&larr; Haka</a></div>
+  <div><a href="/doc/command-line.html">Command line &rarr;</a></div>
+</div>

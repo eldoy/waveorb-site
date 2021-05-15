@@ -5,3 +5,8 @@ For sending mail we made the [wmail](https://github.com/eldoy/wmail) library, wh
 Check out [the documentation for wmail](https://github.com/eldoy/wmail#readme) to set up your emails.
 
 Happy sending!
+
+<div class="nav">
+  <div><a href="/doc/locales.html">&larr; Locales</a></div>
+  <div><a href="/doc/middleware.html">Middleware &rarr;</a></div>
+</div>

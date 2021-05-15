@@ -16,3 +16,8 @@ The plugin can then be used in your pages, layouts, mails, filters and actions, 
 ```js
 const result = await $.app.db('project').create({ name: 'infinity' })
 ```
+
+<div class="nav">
+  <div><a href="/doc/pages.html">&larr; Pages</a></div>
+  <div><a href="/doc/client.html">Client &rarr;</a></div>
+</div>

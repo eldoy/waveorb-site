@@ -212,3 +212,8 @@ Once you need to customize your backend, just write your own actions to replace 
 If you need to use Waveorb actions without the Waveorb client you can access your actions via URL too. If your action is in `app/actions/project/create.js`, you can access it via the URL `/api/project/create` using a `POST` request.
 
 In development testing you remove the `/api` to make it just `/project/create`.
+
+<div class="nav">
+  <div><a href="/doc/how-it-works.html">&larr; How it works</a></div>
+  <div><a href="/doc/assets.html">Assets &rarr;</a></div>
+</div>

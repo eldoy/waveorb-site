@@ -25,3 +25,8 @@ The Waveorb framework is built from the following libraries:
 ... and many more, all open source, hosted on Github.
 
 Thank you to everyone working on software that makes Waveorb possible!
+
+<div class="nav">
+  <div><a href="/doc/environment.html">&larr; Environment</a></div>
+  <div><a href="/doc/feedback-and-questions.html">Feedback and questions &rarr;</a></div>
+</div>

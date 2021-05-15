@@ -12,3 +12,8 @@ module.exports = async function(req, res) {
 ```
 
 You can control the order of the middleware by prefixing them with a number or naming them alphabetically: `1-logger.js`, `2-cache.js`.
+
+<div class="nav">
+  <div><a href="/doc/mail.html">&larr; Mail</a></div>
+  <div><a href="/doc/pages.html">Pages &rarr;</a></div>
+</div>

@@ -153,3 +153,8 @@ validation:
 ```
 
 Copy this to your other locale files in `app/locales` and translate them to make them work with your language.
+
+<div class="nav">
+  <div><a href="/doc/layouts.html">&larr; Layouts</a></div>
+  <div><a href="/doc/mail.html">Mail &rarr;</a></div>
+</div>

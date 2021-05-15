@@ -42,3 +42,8 @@ module.exports = async function($) {
 ```
 
 Mail layouts work in a similar way to page layouts. Read more [about mail layouts here.](/doc/mail.html#mail-layouts)
+
+<div class="nav">
+  <div><a href="/doc/filters.html">&larr; Filters</a></div>
+  <div><a href="/doc/locales.html">Locales &rarr;</a></div>
+</div>

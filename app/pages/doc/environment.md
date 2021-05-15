@@ -43,3 +43,8 @@ and then accessing them in your app, here with fallback:
 ```js
 var port = process.env.WAVEORB_PORT || 5000
 ```
+
+<div class="nav">
+  <div><a href="/doc/seo-and-marketing.html">&larr; SEO and marketing</a></div>
+  <div><a href="/doc/libraries.html">Libraries &rarr;</a></div>
+</div>

@@ -66,3 +66,8 @@ ${$.style('/css/reset.css', '/css/app.css')}
 ```
 
 This will create tags for all of them in the order specified.
+
+<div class="nav">
+  <div><a href="/doc/actions.html">&larr; Actions</a></div>
+  <div><a href="/doc/config.html">Config &rarr;</a></div>
+</div>

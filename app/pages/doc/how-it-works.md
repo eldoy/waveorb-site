@@ -69,3 +69,8 @@ Code errors and exceptions will also return a 200, but the response will contain
 ```
 
 The only time you will get something else than a 200 is when a page is not found, then you will get a 404 status code and response.
+
+<div class="nav">
+  <div><a href="/doc/getting-started.html">&larr; Getting started</a></div>
+  <div><a href="/doc/actions.html">Actions &rarr;</a></div>
+</div>

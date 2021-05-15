@@ -90,3 +90,12 @@ code:not([class]) {
   border-bottom: 1px solid $light;
   padding: 1rem 0;
 }
+
+.nav {
+  display: flex;
+  margin-top: 2rem;
+  div:first-child {
+    flex-grow: 1;
+  }
+
+}

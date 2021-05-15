@@ -219,3 +219,8 @@ const urls = await dugg.upload($.files, config)
 // Return URLs to client
 return urls
 ```
+
+<div class="nav">
+  <div><a href="/doc/plugins.html">&larr; Plugins</a></div>
+  <div><a href="/doc/haka.html">Haka &rarr;</a></div>
+</div>
