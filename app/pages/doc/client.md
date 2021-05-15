@@ -10,7 +10,7 @@ npm i waveorb-client
 
 ### Usage
 
-The waveorb client is included in when you use `waveorb create` to make an application. If you're setting it up from scratch, copy the `/dist/waveorb.js` file to `app/assets/js` and include it in your layout:
+The Waveorb client is included in when you use `waveorb create` to make an application. If you're setting it up from scratch, copy the `/dist/waveorb.js` file to `app/assets/js` and include it in your layout:
 ```html
 <script src="/js/waveorb-min.js"></script>
 ```
@@ -23,7 +23,7 @@ const waveorb = require('waveorb-client')
 const api = waveorb('https://example.com/api')
 ```
 
-The `/api` at the end is used if you used [waveorb server](https://github.com/eldoy/waveorb-server) to set up your production server.
+The `/api` at the end is used if you used [Waveorb server](https://github.com/eldoy/waveorb-server) to set up your production server.
 
 Import the Waveorb client like this if you're using Webpack:
 ```js

@@ -1012,8 +1012,12 @@ a.active {
 }
 
 code:not([class]) {
-  background: #ffa;
+  background: #f5f5f5;
   white-space: nowrap;
+  font-family: inherit;
+  padding: 1px 5px;
+  border: 1px solid #dfdfdf;
+  border-radius: 5px;
 }
 
 #flash {

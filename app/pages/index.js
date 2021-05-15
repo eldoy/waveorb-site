@@ -34,7 +34,7 @@ module.exports = async function($) {
       <img src="/img/waveorb-logo-full.svg" alt="waveorb-logo" height="223" width="584">
       <h1>Create incredible applications</h1>
       <p>
-        Javascript Web App Development Framework.
+        Javascript Web App Development Framework
       </p>
       <div class="github">
         <img src="/img/github-badge.svg" alt="Github badge" width="32" height="32">
@@ -61,7 +61,7 @@ module.exports = async function($) {
       </p>
       <h3>Ease of use</h3>
       <p>
-        Integrate waveorb into your existing web site or build one from scratch.
+        Integrate Waveorb into your existing web site or build one from scratch.
       </p>
     </div>
     <div class="action">

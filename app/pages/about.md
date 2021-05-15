@@ -18,7 +18,7 @@ At the moment Waveorb consists of many smaller libraries and can be used for fro
 
 The default frontend is specially developed for ease of use, speed and simplicity. Waveorb frontend apps are very simple in that they are just plain javascript functions returning HTML as text strings. It's based on standard ES6 string templates (backtick strings). No complicated setup with VDOM, Babel, Webpack or polyfills is needed. Just go!
 
-You can also use any frontend library for your app. [React,](https://reactjs.org) [Vue,](https://vuejs.org) [Svelte](https://svelte.dev) or just vanilla HTML and JS, it's up to you. Just drop the waveorb client into a [Wordpress](https://wordpress.org) or [Wix](https://www.wix.com) site if you need some extra interactivity or need to save some data.
+You can also use any frontend library for your app. [React,](https://reactjs.org) [Vue,](https://vuejs.org) [Svelte](https://svelte.dev) or just vanilla HTML and JS, it's up to you. Just drop the Waveorb client into a [Wordpress](https://wordpress.org) or [Wix](https://www.wix.com) site if you need some extra interactivity or need to save some data.
 
 ## Maintainability and SEO
 
@@ -26,7 +26,7 @@ As other frontend libraries evolve, they change their APIs, making your app hard
 
 Since we're running Javascript on the server, Waveorb is isomorphic, meaning you can share code between the server and the browser. You have complete control over what you do on the server, and what you do in the browser. The frontend is run with server side rendering in development, and can be built ahead of time as Jamstack compatible static pages for when it goes into production.
 
-_This also makes search engines happy, Waveorb is perfect for SEO._
+This also makes search engines happy, Waveorb is perfect for SEO.
 
 In case you're wondering, you can still create components and build your app just like with other frontend frameworks, it's very flexible. [Give it a try](/doc/pages.html) and let us know what you think.
 
@@ -60,7 +60,7 @@ The web client is of course isomorphic, so it works from the command line as wel
 
 The Waveorb CLI is included when you install Waveorb via npm. It has everything you need to manage your app. Create, build and deploy your app from the command line. You can boot a VPS host with support for free SSL certificates (via [Let's Encrypt](https://letsencrypt.org)), HTTP2, Brotli compression, MongoDB, Redis, zsh, SSH and more. You can even host multiple apps on the same VPS host.
 
-Have a look at [waveorb server](https://github.com/eldoy/waveorb-server) to learn more. 100% performance rating guaranteed.
+Have a look at [Waveorb server](https://github.com/eldoy/waveorb-server) to learn more. 100% performance rating guaranteed.
 
 Command line scripts lets you communicate with your servers from the terminal. There's no need to log into the server anymore. Deployment and updates are handled right from your own computer.
 
