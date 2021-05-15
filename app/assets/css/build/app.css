@@ -473,7 +473,7 @@ aside {
 body {
   color: #222;
   font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.6;
 }
 
@@ -527,7 +527,7 @@ pre {
   color: #222;
   display: block;
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-  font-size: 16px;
+  font-size: 17px;
   margin: 16px 0;
   padding: 16px;
   white-space: pre-wrap;
@@ -537,7 +537,7 @@ pre {
 code {
   color: #222;
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-  font-size: 16px;
+  font-size: 17px;
   line-height: inherit;
   margin: 0;
   padding: 0;
@@ -577,12 +577,12 @@ s {
 }
 
 sup {
-  font-size: 14px;
+  font-size: 15px;
   vertical-align: super;
 }
 
 sub {
-  font-size: 14px;
+  font-size: 15px;
   vertical-align: sub;
 }
 
@@ -742,7 +742,7 @@ label {
 legend {
   padding: 0;
   display: table;
-  font-size: 16px;
+  font-size: 17px;
   margin-bottom: 8px;
 }
 
@@ -874,6 +874,7 @@ td {
 code[class*=language-],
 pre[class*=language-] {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 15px;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
