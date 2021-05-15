@@ -155,7 +155,6 @@ You can also use [markdown](https://github.com/adam-p/markdown-here/wiki/Markdow
 
 ```markdown
 # Article title
-
 This is the articles content.
 ```
 
@@ -163,11 +162,11 @@ It will be converted to HTML automatically. Code snippets will be automatically 
 
 The title of the generated HTML page will be the same as the markdown file name. You can also add some data to the top of your Markdown file to override this:
 ```markdown
+---
 title: The new article title
 description: Meta description for this article
+---
 ```
-
-Add `---` on top and below the values.
 
 ### Cookies
 Waveorb has cookie support for storing data between pages.
