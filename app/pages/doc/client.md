@@ -54,9 +54,9 @@ var result = await api({
 
 ### Websockets
 
-When using web sockets you set up a single connection which is re-used for each new request. This has the advantage of being a bit faster and allows you to send data from the server to the browser whenever you need to. As such it is perfect for subscriptions or real-time data.
+When using websockets you set up a single connection which is re-used for each new request. This has the advantage of being a bit faster and allows you to send data from the server to the browser whenever you need to or multiple times per request. As such it is perfect for subscriptions or real-time data.
 
-Waveorb web sockets automatically reconnects on failure, set it up like this:
+Waveorb websockets automatically reconnects on failure, set it up like this:
 ```js
 // Websocket with SSL, needs to await connection
 window.socket = await waveorb('wss://localhost:5000')
@@ -69,13 +69,7 @@ waveorb('wss://localhost:5000').then(function(socket) {
 // Set up websocket connection, with default options shown
 var socket = await waveorb('ws://localhost:5000', {
   // Reconnect timeout in ms, set to false to not automatically reconnect
-  reconnect: 1000,
-
-  // Ping timeout in ms, set to false to not ping the server
-  ping: false,
-
-  // Disconnect timeout when $pong is not received
-  disconnect: 3000
+  reconnect: 1000
 })
 
 // Register events like this
@@ -91,16 +85,18 @@ socket.on('error', (event) => {
   console.log('Connection error')
 })
 
+// This is where
 socket.on('message', (data, event) => {
   console.log('Received message', data)
 })
 
-// Send values to the 'project/create' action and wait for response
-var result = await socket({
+// Send values to the 'project/create' action
+socket.send({
   action: 'project/create',
   values: { name: 'Festival' }
 })
 ```
+The Waveorb client for websockets is based on the [wsrecon library.](https://github.com/eldoy/wsrecon)
 
 ### Connecting client and server
 The action name and parameters in the client matches the server action name and validation. If your server action looks like this:
