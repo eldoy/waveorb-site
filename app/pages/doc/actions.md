@@ -150,7 +150,9 @@ To set up your backend using default actions simply create an empty action file.
 
 The default actions are as follows:
 
-**Create action**
+#### Create action
+
+Use this action when you want to create a new document.
 
 ```js
 module.exports = {
@@ -161,7 +163,9 @@ module.exports = {
 }
 ```
 
-**Update action**
+#### Update action
+
+Use this action when you want to update a document.
 
 ```js
 module.exports = {
@@ -172,7 +176,9 @@ module.exports = {
 }
 ```
 
-**Get action**
+#### Get action
+
+Use this action when you want to get a single document.
 
 ```js
 module.exports = {
@@ -183,7 +189,9 @@ module.exports = {
 }
 ```
 
-**Find action**
+#### Find action
+
+Use this action when you want to find documents. Supports fields, sort, skip and limit, and can be used for pagination.
 
 ```js
 module.exports = {
@@ -194,7 +202,9 @@ module.exports = {
 }
 ```
 
-**Count action**
+#### Count action
+
+Use this action to count documents.
 
 ```js
 module.exports = {
@@ -205,7 +215,9 @@ module.exports = {
 }
 ```
 
-**Delete action**
+#### Delete action
+
+Use this action to delete documents.
 
 ```js
 async function($) {
