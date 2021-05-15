@@ -85,7 +85,10 @@ If the any of the validations doesn't pass, an error message is returned. Have a
 
 The error message then looks like this, with each failing field and errors as an array:
 ```js
-{ error: { message: 'validation error' }, name: ['must be a URL'] }
+{
+  error: { message: 'validation error' },
+  query: { name: ['must be a URL'] }
+}
 ```
 
 ### Full usage example
@@ -141,9 +144,14 @@ function handleSubmit(form) {
 
 ### Default actions
 
-By default Waveorb comes with default actions built in so you can start development without worrying about your API design. The default actions are described below.
+By default Waveorb comes with default actions built in so you can start development without worrying about your API design.
 
-#### Create
+To set up your backend using default actions simply create an empty action file. If you need to save your data, create an empty file called `create.js` in `app/actions/model` and it just works.
+
+The default actions are as follows:
+
+**Create action**
+
 ```js
 module.exports = {
   main: async function($) {
@@ -153,7 +161,8 @@ module.exports = {
 }
 ```
 
-#### Update
+**Update action**
+
 ```js
 module.exports = {
   main: async function($) {
@@ -163,7 +172,8 @@ module.exports = {
 }
 ```
 
-#### Get
+**Get action**
+
 ```js
 module.exports = {
   main: async function($) {
@@ -173,7 +183,8 @@ module.exports = {
 }
 ```
 
-#### Find
+**Find action**
+
 ```js
 module.exports = {
   main: async function($) {
@@ -183,7 +194,8 @@ module.exports = {
 }
 ```
 
-#### Count
+**Count action**
+
 ```js
 module.exports = {
   main: async function($) {
@@ -193,7 +205,8 @@ module.exports = {
 }
 ```
 
-#### Delete
+**Delete action**
+
 ```js
 async function($) {
   const { query = {} } = $.params
@@ -201,9 +214,7 @@ async function($) {
 }
 ```
 
-The `model` is automatically replaced with the name of the directory your action file lives in.
-
-To set up your backend using default actions simply create an empty action file. If you need to save your data, create an empty file called `create.js` in `app/actions` and it just works.
+The `model` in the database queries here are automatically replaced with the name of the directory your action file lives in.
 
 Once you need to customize your backend, just write your own actions to replace the default ones.
 
