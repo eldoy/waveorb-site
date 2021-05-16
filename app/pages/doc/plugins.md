@@ -18,6 +18,6 @@ const result = await $.app.db('project').create({ name: 'infinity' })
 ```
 
 <div class="nav">
-  <div><a href="/doc/pages.html">&larr; Pages</a></div>
+  <div><a href="/doc/middleware.html">&larr; Middleware</a></div>
   <div><a href="/doc/client.html">Client &rarr;</a></div>
 </div>
