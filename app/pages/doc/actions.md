@@ -237,6 +237,6 @@ If you need to use Waveorb actions without the Waveorb client you can access you
 In development testing you remove the `/api` to make it just `/project/create`.
 
 <div class="nav">
-  <div><a href="/doc/how-it-works.html">&larr; How it works</a></div>
+  <div><a href="/doc/pages.html">&larr; Pages</a></div>
   <div><a href="/doc/assets.html">Assets &rarr;</a></div>
 </div>

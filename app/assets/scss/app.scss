@@ -8,6 +8,10 @@ $font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
 main {
   padding: 0 0 2rem;
   max-width: 600px;
+  min-height: 250px;
+  @media screen and (max-width: 615px) {
+    padding: 0 0.5rem 2rem;
+  }
 }
 
 form button ~ a,

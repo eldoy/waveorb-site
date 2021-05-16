@@ -15,5 +15,5 @@ You can control the order of the middleware by prefixing them with a number or n
 
 <div class="nav">
   <div><a href="/doc/mail.html">&larr; Mail</a></div>
-  <div><a href="/doc/pages.html">Pages &rarr;</a></div>
+  <div><a href="/doc/plugins.html">Plugins &rarr;</a></div>
 </div>

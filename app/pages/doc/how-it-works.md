@@ -1,6 +1,6 @@
 ## How it works
 
-In the browser (front-end), a minimal page looks like this, stored in the `app/pages` folder:
+In the browser, a minimal page looks like this, stored in `app/pages/hello.js`:
 ```js
 module.exports = async function($){
   $.page.title = 'Hello world'
@@ -9,11 +9,13 @@ module.exports = async function($){
   `
 }
 ```
+Access this page at `/hello.js` in your browser. The `app/pages` directory is your app's web root.
+
 This function returns an HTML string in backticks. These are [Javascript template literals.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) They are a new feature of Javascript ES6 which is what we use to create HTML.
 
 Of course you don't have to use backticks, any string will do, but it is convenient when you want to return HTML. Adding the `/* html */` comment in front of the backtick will let your editor know it's HTML and add [syntax highlighting.](https://marketplace.visualstudio.com/items?itemName=Tobermory.es6-string-html)
 
-When you start your app with `waveorb serve`, or if you're using the [nodemon script](/doc/getting-started.html) with `npm run dev`, everything in the app folder will be loaded into the app object.
+When you start your app with `waveorb serve`, or if you're in development using `npm run dev`, everything in the app folder will be loaded into the app object.
 
 ### The orb object
 The page function receives a single object, the orb object `$`, which contains all of your built in properties and functions:
@@ -32,11 +34,11 @@ The page function receives a single object, the orb object `$`, which contains a
 * __$.t__ - Language translation function
 * __$.env__ - Environment variable substitution
 
-Anything you add to the orb object `$` will be available later. For example, the `$.page.title` will be available in your layout. Later we will show how it is also used with filters, actions and plugins.
+Anything you add to the orb object `$`, or the `app` object as with plugins, will be available later. For example, the `$.page.title` will be available in your layout. Later we will show how it is also used with [filters](/doc/filters.html), [actions](/doc/actions.html) and [plugins.](/doc/plugins.html)
 
 ### Return values
 
-On the server (back-end), middleware, filters and actions return data. If they return an object, string or false, execution is halted and the result is sent back to your page in the browser. If they don't return anything (undefined), execution continues.
+On the server, [middleware](/doc/middleware.html), [filters](/doc/filters.html) and [actions](/doc/actions.html) return data. If they return an object, string or false, execution is halted and the result is sent back to your page in the browser. If they don't return anything (undefined), execution continues.
 
 ```js
 async function($) {
@@ -72,5 +74,5 @@ The only time you will get something else than a 200 is when a page is not found
 
 <div class="nav">
   <div><a href="/doc/getting-started.html">&larr; Getting started</a></div>
-  <div><a href="/doc/actions.html">Actions &rarr;</a></div>
+  <div><a href="/doc/pages.html">Pages &rarr;</a></div>
 </div>

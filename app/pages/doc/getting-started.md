@@ -3,6 +3,9 @@
 Installing Waveorb requires [NodeJS](https:/nodejs.org). Here we will create an app called `hello`, you can call it whatever you want. The `waveorb create` command will pull the latest template from [here.](https://github.com/eldoy/waveorb-templates)
 
 ```bash
+# Install nodemon
+npm i -g nodemon
+
 # Install waveorb
 npm i -g waveorb
 
@@ -11,9 +14,6 @@ waveorb create hello
 
 # Go to your new app
 cd hello
-
-# Install nodemon
-npm i -g nodemon
 
 # Start the development server
 npm run dev
@@ -24,7 +24,7 @@ Open [http://localhost:5000](http://localhost:5000) in a new tab to view your ap
 
 ### App structure
 
-Now open your app folder in your favorite editor and have a look. Most of the folders can be deleted depending on your needs.
+Now open your app folder in your favorite editor and have a look. Some of the folders can be deleted depending on your needs.
 
 * __app/assets__ - javascript, css and images
 * __app/config__ - config, settings and options

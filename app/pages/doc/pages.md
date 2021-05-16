@@ -191,6 +191,6 @@ cookie('name', 'hello')
 Read more about how to use cookies in the browser on [the Haka page.](https://github.com/eldoy/haka#cookies)
 
 <div class="nav">
-  <div><a href="/doc/middleware.html">&larr; Middleware</a></div>
-  <div><a href="/doc/plugins.html">Plugins &rarr;</a></div>
+  <div><a href="/doc/how-it-works.html">&larr; How it works</a></div>
+  <div><a href="/doc/actions.html">Actions &rarr;</a></div>
 </div>

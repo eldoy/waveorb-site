@@ -965,6 +965,12 @@ pre[class*=language-] {
 main {
   padding: 0 0 2rem;
   max-width: 600px;
+  min-height: 250px;
+}
+@media screen and (max-width: 615px) {
+  main {
+    padding: 0 0.5rem 2rem;
+  }
 }
 
 form button ~ a,
