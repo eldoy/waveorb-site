@@ -58,7 +58,7 @@ The web client is of course isomorphic, so it works from the command line as wel
 
 ## Server deployment
 
-The Waveorb CLI is included when you install Waveorb via npm. It has everything you need to manage your app. Create, build and deploy your app from the command line. You can boot a VPS host with support for free SSL certificates (via [Let's Encrypt](https://letsencrypt.org)), HTTP2, Brotli compression, MongoDB, Redis, zsh, SSH and more. You can even host multiple apps on the same VPS host.
+The Waveorb CLI is included when you install Waveorb via npm. It has everything you need to manage your app. Create, build and deploy your app from the command line. You can boot a VPS host with support for free SSL certificates (via [Let's Encrypt](https://letsencrypt.org)), HTTP2, gzip compression, MongoDB, Redis, zsh, SSH and more. You can even host multiple apps on the same VPS host.
 
 Have a look at [Waveorb server](https://github.com/eldoy/waveorb-server) to learn more. 100% performance rating guaranteed.
 

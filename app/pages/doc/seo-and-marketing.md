@@ -23,7 +23,7 @@ Here are some other tips:
 
 ### Speed and response times
 
-Waveorb serves blazing fast pre-rendered HTML and assets with HTML caching (max-age, etags, 304), HTTP2, brotli compression served from NGINX which is written in C. Web pages served this way appears almost instantly and won't let your users wait.
+Waveorb serves blazing fast pre-rendered HTML and assets with HTML caching (max-age, etags, 304), HTTP2, gzip compression served from NGINX, which is really fast. Web pages served this way appears almost instantly and won't let your users wait.
 
 Pure speed isn't everything though, there are other things to consider as well.
 

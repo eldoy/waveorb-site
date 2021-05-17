@@ -22,7 +22,7 @@ Let's go through each of these and explain what they do.
 Installing a server ready for Waveorb is incredibly easy. We have created a script that does it for you with all the bells and whistles:
 
 * NodeJS LTS
-* NGINX loadbalancer with Brotli compression and HTTP2
+* NGINX loadbalancer with gzip compression and HTTP2
 * Automatic Certbot Let's Encrypt SSL
 * Public Key authentication
 * Firewall (UFW)
