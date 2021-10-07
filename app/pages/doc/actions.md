@@ -4,7 +4,7 @@ Actions are async Javascript functions that run on your app server. They are pri
 
 ### Create JSON APIs
 
-Creating a JSON API with Waveorb server actions is very easy and should be familiar if you've used NodeJS before. An action usually has a name instead of a URL path. The name is what you use with [the client](/doc/client.html) to access it.
+Creating a JSON API with Waveorb server actions is very easy and should be familiar if you've used NodeJS before. An action usually has a name instead of a URL path. The name is what you use with [the client](/doc/client) to access it.
 
 AJAX, uploads and websockets all connect to the actions in the same way. This is how an action may look:
 ```js
@@ -34,9 +34,9 @@ module.exports = {
   }
 }
 ```
-First filters are run, then before, validations, main and after. In any of the functions you can add to the orb object `$` for use later. Adding to the special `$.result` will return the value of that property, unless you do a return or throw before that.
+First filters are run, then before, validations, main and after. In any of the functions you can add to the orb object `$` for use later.
 
-If you do a return in the main function, then after will not be run. Return or throw stops the execution flow and return data to the client. As each of the functions are async functions, you can fetch data and wait for it anywhere.
+If you return something from the main function, then after will not be run. Return or throw stops the execution flow and return data to the client. As each of the functions are async functions, you can fetch data and wait for it anywhere.
 
 ### Validations
 Most of the time we need to validate the parameters sent to a server action. Here's a list of the built in validations:
@@ -81,7 +81,7 @@ query: {
 }
 ```
 
-If the any of the validations doesn't pass, an error message is returned. Have a look at [the default translations](/doc/locales.html#default-translations) for a complete list of the messages.
+If the any of the validations doesn't pass, an error message is returned. Have a look at [the default translations](/doc/locales#default-translations) for a complete list of the messages.
 
 The error message then looks like this, with each failing field and errors as an array:
 ```js
@@ -109,7 +109,7 @@ module.exports = {
 }
 ```
 
-Then in one of your [app's pages](/doc/pages.html) use this HTML:
+Then in one of your [app's pages](/doc/pages) use this HTML:
 ```html
 <form onsubmit="return false">
   <label for="title">Title</label>
@@ -136,7 +136,7 @@ function handleSubmit(form) {
     })
   } else {
     // Redirect to login
-    window.location = '/projects.html'
+    window.location = '/projects'
   }
 }
 </script>
@@ -237,6 +237,6 @@ If you need to use Waveorb actions without the Waveorb client you can access you
 In development testing you remove the `/api` to make it just `/project/create`.
 
 <div class="nav">
-  <div><a href="/doc/pages.html">&larr; Pages</a></div>
-  <div><a href="/doc/assets.html">Assets &rarr;</a></div>
+  <div><a href="/doc/pages">&larr; Pages</a></div>
+  <div><a href="/doc/assets">Assets &rarr;</a></div>
 </div>

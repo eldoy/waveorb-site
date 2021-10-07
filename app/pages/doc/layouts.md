@@ -1,6 +1,6 @@
 ## Layouts
 
-Layouts surround [your pages](/doc/pages.html) and [mails](/doc/mail.html). It is where your title, head, nav and footer usually goes. You can have multiple layouts if you want.
+Layouts surround [your pages](/doc/pages) and [mails](/doc/mail). It is where your title, head, nav and footer usually goes. You can have multiple layouts if you want.
 
 You specify the layout to use in your page with `$.page.layout = 'blog'`, where `'blog'` is the name of the layout. In this case it would match the layout file `app/layouts/blog.js`. If none is specified, it defaults to `default`.
 
@@ -41,9 +41,9 @@ module.exports = async function($) {
 }
 ```
 
-Mail layouts work in a similar way to page layouts. Read more [about mail layouts here.](/doc/mail.html#mail-layouts)
+Mail layouts work in a similar way to page layouts. Read more [about mail layouts here.](/doc/mail#mail-layouts)
 
 <div class="nav">
-  <div><a href="/doc/filters.html">&larr; Filters</a></div>
-  <div><a href="/doc/locales.html">Locales &rarr;</a></div>
+  <div><a href="/doc/filters">&larr; Filters</a></div>
+  <div><a href="/doc/locales">Locales &rarr;</a></div>
 </div>

@@ -40,7 +40,7 @@ To check the current language, you can use `window.cookie('lang')` in the browse
 
 Using the Waveorb client, you can set the language via the `lang` parameter like this: `await action('someAction', { lang: 'en' })`
 
-The most common way to set the language is via the URL. If you prefix your URL with the language like this: `/es/about.html` or just `/es/`, then the language will be set to `es`.
+The most common way to set the language is via the URL. If you prefix your URL with the language like this: `/es/about` or just `/es/`, then the language will be set to `es`.
 
 Finally, you can use the `WAVEORB_LANG` environment variable to set the default language of your app:
 ```bash
@@ -72,11 +72,11 @@ routemap:
   # Map '/es/' to 'pages/index.js' Spanish (es)
   /es/: es@index
 
-  # Map '/about.html' to 'pages/about.js' English (en)
-  /about.html: en@about
+  # Map '/about' to 'pages/about.js' English (en)
+  /about: en@about
 
-  # Map '/es/sobre.html' to 'pages/about.js' Spanish (es)
-  /es/sobre.html: es@about
+  # Map '/es/sobre' to 'pages/about.js' Spanish (es)
+  /es/sobre: es@about
 ```
 
 ### The $.link function
@@ -91,11 +91,11 @@ The HTML above will give you this:
 ```html
 <!-- If language is 'en' -->
 <a href="/">
-<a href="/about.html">
+<a href="/about">
 
 <!-- If language is 'es' -->
 <a href="/es/">
-<a href="/es/sobre.html">
+<a href="/es/sobre">
 ```
 
 You can force the language like this:
@@ -155,6 +155,6 @@ validation:
 Copy this to your other locale files in `app/locales` and translate them to make them work with your language.
 
 <div class="nav">
-  <div><a href="/doc/layouts.html">&larr; Layouts</a></div>
-  <div><a href="/doc/mail.html">Mail &rarr;</a></div>
+  <div><a href="/doc/layouts">&larr; Layouts</a></div>
+  <div><a href="/doc/mail">Mail &rarr;</a></div>
 </div>

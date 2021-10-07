@@ -28,7 +28,7 @@ Since we're running Javascript on the server, Waveorb is isomorphic, meaning you
 
 This also makes search engines happy, Waveorb is perfect for SEO.
 
-In case you're wondering, you can still create components and build your app just like with other frontend frameworks, it's very flexible. [Give it a try](/doc/pages.html) and let us know what you think.
+In case you're wondering, you can still create components and build your app just like with other frontend frameworks, it's very flexible. [Give it a try](/doc/pages) and let us know what you think.
 
 ## Advanced JSON API Server
 
@@ -77,7 +77,7 @@ You can use all of the packages on npm to build your app, but we've also made a 
 * [a static file server](https://github.com/eldoy/hangersteak)
 * [an upload and download client](https://github.com/eldoy/dugg)
 
-and [many more.](/doc/libraries.html) They can all be used in your app via the plugin system, or as part of your scripts and external resources.
+and [many more.](/doc/libraries) They can all be used in your app via the plugin system, or as part of your scripts and external resources.
 
 You can also write your own libraries and include them in your app, the Node ecosystem is infinitely powerful.
 

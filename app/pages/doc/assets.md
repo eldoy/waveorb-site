@@ -45,8 +45,6 @@ This will produce a list of HTML tags in the order you specified if you are in d
 <link href="/bundle.css" rel="stylesheet" type="text/css">
 ```
 
-When you run `waveorb build` the build script will send a special header called `x-waveorb-build` to instruct the server that [we are building.](/doc/command-line.html#build)
-
 You can also use the `script` and `style` functions instead of HTML tags as a convenience:
 ```js
 ${$.script('/js/app.js')}
@@ -68,6 +66,6 @@ ${$.style('/css/reset.css', '/css/app.css')}
 This will create tags for all of them in the order specified.
 
 <div class="nav">
-  <div><a href="/doc/actions.html">&larr; Actions</a></div>
-  <div><a href="/doc/config.html">Config &rarr;</a></div>
+  <div><a href="/doc/actions">&larr; Actions</a></div>
+  <div><a href="/doc/config">Config &rarr;</a></div>
 </div>

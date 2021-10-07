@@ -34,11 +34,11 @@ The page function receives a single object, the orb object `$`, which contains a
 * __$.t__ - Language translation function
 * __$.env__ - Environment variable substitution
 
-Anything you add to the orb object `$`, or the `app` object as with plugins, will be available later. For example, the `$.page.title` will be available in your layout. Later we will show how it is also used with [filters](/doc/filters.html), [actions](/doc/actions.html) and [plugins.](/doc/plugins.html)
+Anything you add to the orb object `$`, or the `app` object as with plugins, will be available later. For example, the `$.page.title` will be available in your layout. Later we will show how it is also used with [filters](/doc/filters), [actions](/doc/actions) and [plugins.](/doc/plugins)
 
 ### Return values
 
-On the server, [middleware](/doc/middleware.html), [filters](/doc/filters.html) and [actions](/doc/actions.html) return data. If they return an object, string or false, execution is halted and the result is sent back to your page in the browser. If they don't return anything (undefined), execution continues.
+On the server, [middleware](/doc/middleware), [filters](/doc/filters) and [actions](/doc/actions) return data. If they return an object, string or false, execution is halted and the result is sent back to your page in the browser. If they don't return anything (undefined), execution continues.
 
 ```js
 async function($) {
@@ -73,6 +73,6 @@ Code errors and exceptions will also return a 200, but the response will contain
 The only time you will get something else than a 200 is when a page is not found, then you will get a 404 status code and response.
 
 <div class="nav">
-  <div><a href="/doc/getting-started.html">&larr; Getting started</a></div>
-  <div><a href="/doc/pages.html">Pages &rarr;</a></div>
+  <div><a href="/doc/getting-started">&larr; Getting started</a></div>
+  <div><a href="/doc/pages">Pages &rarr;</a></div>
 </div>

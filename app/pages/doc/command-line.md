@@ -56,13 +56,13 @@ This will connect to the server where your domain name is pointing and attempt t
 You can also set up redirects here:
 ```json
 {
-  "redirects": ["^/about.html$ https://waveorb.com"]
+  "redirects": ["^/about$ https://waveorb.com"]
 }
 ```
 By default redirects are `301 permanent`. Add `redirect` after to do a `302` temporary redirect:
 ```json
 {
-  "redirects": ["^/about.html$ https://waveorb.com redirect"]
+  "redirects": ["^/about$ https://waveorb.com redirect"]
 }
 ```
 
@@ -72,7 +72,7 @@ To do redirects if your app has multiple domains, try this:
   "domains": [
     {
       "names": "waveorb.com www.waveorb.com",
-      "redirects": ["^/about.html$ https://eldoy.com"]
+      "redirects": ["^/about$ https://eldoy.com"]
     },
     {
       "names": "eldoy.com"
@@ -95,18 +95,11 @@ module.exports = async function() {
     // Specify the URLs you want to build
     urls: [
       '/',
-      '/about.html',
-      '/docs.html'
+      '/about',
+      '/docs'
     ]
   }
 }
-```
-
-When using the `waveorb build` command, a special header called `x-waveorb-build` will be set to `true` inside you application. This allows you to set up variables that need a special value at build time.
-```js
-const host = $.req.headers['x-waveorb-build']
-  ? 'https://speria.no/api'
-  : 'http://localhost:5000'
 ```
 
 Here the value of `host` will be `http://localhost:5000` when you're not building for example in development mode. When building, the value of `host` will be `https://speria.no/api`.
@@ -115,7 +108,7 @@ Here the value of `host` will be `http://localhost:5000` when you're not buildin
 ```
 
 ### Sitemap
-Running `waveorb sitemap` will generate the sitemap you have defined in `app/config/sitemap.yml` and copy it to the `app/assets` folder. Read [more about sitemaps here.](/doc/seo-and-marketing.html#sitemap)
+Running `waveorb sitemap` will generate the sitemap you have defined in `app/config/sitemap.yml` and copy it to the `app/assets` folder. Read [more about sitemaps here.](/doc/seo-and-marketing#sitemap)
 
 ### Ping
 The `waveorb ping` command will ping Google and Bing and let them know about your sitemap changes:
@@ -144,6 +137,6 @@ waveorb cmd
 Hit `Ctrl + d` or `Ctrl + c` twice to exit.
 
 <div class="nav">
-  <div><a href="/doc/database.html">&larr; Database</a></div>
-  <div><a href="/doc/seo-and-marketing.html">SEO and marketing &rarr;</a></div>
+  <div><a href="/doc/database">&larr; Database</a></div>
+  <div><a href="/doc/seo-and-marketing">SEO and marketing &rarr;</a></div>
 </div>

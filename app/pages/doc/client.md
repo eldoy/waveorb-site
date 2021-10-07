@@ -35,7 +35,7 @@ It works the exact same way in the browser as on the server, it is isomorphic.
 
 ### HTTP Ajax
 
-The most common way to use the client is over async HTTP Ajax. It initiates a new connection on each request, and gets a result back from your [server API actions.](/doc/actions.html)
+The most common way to use the client is over async HTTP Ajax. It initiates a new connection on each request, and gets a result back from your [server API actions.](/doc/actions)
 
 Set it up like this:
 ```js
@@ -221,6 +221,6 @@ return urls
 ```
 
 <div class="nav">
-  <div><a href="/doc/plugins.html">&larr; Plugins</a></div>
-  <div><a href="/doc/haka.html">Haka &rarr;</a></div>
+  <div><a href="/doc/plugins">&larr; Plugins</a></div>
+  <div><a href="/doc/haka">Haka &rarr;</a></div>
 </div>

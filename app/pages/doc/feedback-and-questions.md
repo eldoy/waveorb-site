@@ -8,6 +8,6 @@ Congratulations! You should now be able to deploy your own Waveorb app to the cl
 Waveorb is developed and maintained by [Eldøy Projects.](https://eldoy.com)
 
 <div class="nav">
-  <div><a href="/doc/libraries.html">&larr; Libraries</a></div>
-  <div><a href="/docs.html">Back to docs &rarr;</a></div>
+  <div><a href="/doc/libraries">&larr; Libraries</a></div>
+  <div><a href="/docs">Back to docs &rarr;</a></div>
 </div>

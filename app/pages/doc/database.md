@@ -1,6 +1,6 @@
 ## Database
 
-You can use any database with Waveorb. Just [use a plugin](/doc/plugins.html) and add it to the app object, or connect directly from within your server actions.
+You can use any database with Waveorb. Just [use a plugin](/doc/plugins) and add it to the app object, or connect directly from within your server actions.
 
 We've made two ready made solutions based on [MongoDB](https://mongodb.com) and [LevelDB.](https://github.com/google/leveldb) MongoDB is a schema free document store, and LevelDB is a disk based server free solution. If you don't have a lot of database transactions then LevelDB works fine, use MongoDB if you need to scale.
 
@@ -163,6 +163,6 @@ Any other solution with a NodeJS API works. If you need more advanced querying c
 Serverless solutions such as [Firebase](firebase.google.com) or [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) will also work nicely with Waveorb.
 
 <div class="nav">
-  <div><a href="/doc/haka.html">&larr; Haka</a></div>
-  <div><a href="/doc/command-line.html">Command line &rarr;</a></div>
+  <div><a href="/doc/haka">&larr; Haka</a></div>
+  <div><a href="/doc/command-line">Command line &rarr;</a></div>
 </div>

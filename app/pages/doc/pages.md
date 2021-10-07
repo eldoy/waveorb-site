@@ -20,7 +20,7 @@ module.exports = async function($) {
 ```
 The orb object `$` is sent through here and then sent to the layout. That means that the layout has access to anything you add to it in your page function. `$.page.title` and `$.page.description` are usually set here and used in the layout.
 
-You can [set the layout](/doc/layout.html) of the page with `$.page.layout = 'name'`, where `name` corresponds to the file name in the `app/layouts` folder. Default is `app/layouts/default.js`.
+You can [set the layout](/doc/layout) of the page with `$.page.layout = 'name'`, where `name` corresponds to the file name in the `app/layouts` folder. Default is `app/layouts/default.js`.
 
 The orb object `$` also contains the `$.page.name` property, which is the name of the current page you're on. It can be used together with `$.page.name` to determine the link of the current page and language:
 ```js
@@ -31,11 +31,11 @@ The orb object `$` also contains the `$.page.name` property, which is the name o
 
 The routes of your pages are defined by the folder structure under `app/pages`. A file in `app/pages/index.js` will be matched by `/` in the browser. If you want the route URL to be `/projects/list/` you place a file in `app/pages/projects/list/index.js`.
 
-Files that don't have an index name always ends with `.html`. The file `app/pages/about.js` will have the route URL `/about.html` and the file `app/pages/projects/users.js` can be found at `/projects/users.html`.
+The file `app/pages/about.js` will have the route URL `/about` and the file `app/pages/projects/users.js` can be found at `/projects/users`.
 
-Dynamic URLs can be achieved by using an underscore (`_`) in front of the folder name or the file name. For example, the structure `/posts/_id` will match the URL `/posts/hello.html` and `$.req.query.id` will have the value `hello` inside your page.
+Dynamic URLs can be achieved by using an underscore (`_`) in front of the folder name or the file name. For example, the structure `/posts/_id` will match the URL `/posts/hello` and `$.req.query.id` will have the value `hello` inside your page.
 
-You can also have routes share the same page which is very convenient if you want to have your pages in multiple languages. Have a look at [the route config info](/doc/locales.html#route-config) for more on that.
+You can also have routes share the same page which is very convenient if you want to have your pages in multiple languages. Have a look at [the route config info](/doc/locales#route-config) for more on that.
 
 ### HTML
 Create HTML tags using template literals, or include your own template library.
@@ -43,7 +43,7 @@ Create HTML tags using template literals, or include your own template library.
 `<div>Hello ${name}</div>`
 ```
 
-You don't really need a HTML DOM library, but the examples uses [Haka,](/doc/haka.html) where you can find and manipulate HTML elements with `html`, `text`, `q` and `qa`, as well as cookie and form handling functions.
+You don't really need a HTML DOM library, but the examples uses [Haka,](/doc/haka) where you can find and manipulate HTML elements with `html`, `text`, `q` and `qa`, as well as cookie and form handling functions.
 
 You can also use libraries like [JQuery](https://jquery.com) if you want, it's up to you.
 
@@ -191,6 +191,6 @@ cookie('name', 'hello')
 Read more about how to use cookies in the browser on [the Haka page.](https://github.com/eldoy/haka#cookies)
 
 <div class="nav">
-  <div><a href="/doc/how-it-works.html">&larr; How it works</a></div>
-  <div><a href="/doc/actions.html">Actions &rarr;</a></div>
+  <div><a href="/doc/how-it-works">&larr; How it works</a></div>
+  <div><a href="/doc/actions">Actions &rarr;</a></div>
 </div>

@@ -7,6 +7,6 @@ The script loads several functions into the window object to make them available
 [Read about how to use Haka here.](https://github.com/eldoy/haka#readme)
 
 <div class="nav">
-  <div><a href="/doc/client.html">&larr; Client</a></div>
-  <div><a href="/doc/database.html">Database &rarr;</a></div>
+  <div><a href="/doc/client">&larr; Client</a></div>
+  <div><a href="/doc/database">Database &rarr;</a></div>
 </div>
