@@ -9,10 +9,10 @@ module.exports = async function($) {
   const token = $.req.cookie('token')
 
   // Find session in database
-  const session = await $.app.db('session').get({ token })
+  const session = await $.db('session').get({ token })
   if (session && session.user_id) {
     // Put data in '$' and use it in the server action later
-    $.user = await $.app.db('user').get({ _id: session.userId })
+    $.user = await $.db('user').get({ _id: session.userId })
   }
   // Continue to next filter or server action
 }
@@ -32,14 +32,12 @@ module.exports = async function($) {
 
 In the server action you use the filters like this:
 ```js
-module.exports = {
+module.exports = async function($) {
   // Run the filters in order
-  filters: ['authenticate', 'admin'],
+  await $.filters(['authenticate', 'admin'])
 
-  // The main function is only reached if filters are passed
-  main: async function($) {
-    return await $.app.db('project').create($.params.data)
-  }
+  // The rest of the function is only reached if filters are passed
+  return await $.db('project').create($.params.data)
 }
 ```
 

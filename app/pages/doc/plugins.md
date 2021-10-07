@@ -14,7 +14,7 @@ module.exports = async function(app) {
 
 The plugin can then be used in your pages, layouts, mails, filters and actions, anywhere the `$` or app objects are available:
 ```js
-const result = await $.app.db('project').create({ name: 'infinity' })
+const result = await $.db('project').create({ name: 'infinity' })
 ```
 
 <div class="nav">

@@ -1,6 +1,6 @@
 ## Actions
 
-Actions are async Javascript functions that run on your app server. They are primarily used for receiving and sending JSON data to and from the browser. This is usually where you use your database, send emails or other things that can't happen in the browser.
+Actions are async Javascript functions that run on your app server. They are primarily used for building APIs by receiving JSON data from the browser. This is usually where you use your database, send emails or other things that can't happen in the browser directly.
 
 ### Create JSON APIs
 
@@ -8,12 +8,9 @@ Creating a JSON API with Waveorb server actions is very easy and should be famil
 
 AJAX, uploads and websockets all connect to the actions in the same way. This is how an action may look:
 ```js
-module.exports = {
-  filters: ['authenticate', 'login-required'],
-  before: async function($) {
-    console.log('Before validation')
-  },
-  validate: {
+module.exports = async function($) {
+  await $.filters(['authenticate', 'login-required'])
+  await $.validate({
     values: {
       project_id: {
         is: '$id',
@@ -24,14 +21,9 @@ module.exports = {
         required: true
       }
     }
-  },
-  main: async function($) {
-    const { values = {} } = $.params
-    return await $.app.db('comment').create(values)
-  },
-  after: async function($) {
-    console.log('Request done!')
-  }
+  })
+  const { values = {} } = $.params
+  return await $.db('comment').create(values)
 }
 ```
 First filters are run, then before, validations, main and after. In any of the functions you can add to the orb object `$` for use later.
@@ -95,17 +87,15 @@ The error message then looks like this, with each failing field and errors as an
 
 In `app/actions/project` create a file called `create.js` with the following content:
 ```js
-module.exports = {
-  validate: {
+module.exports = async function($) {
+  await $.validate({
     values: {
       title: {
         required: true
       }
     }
-  },
-  main: async function($) {
-    return { status: 'OK' }
-  }
+  })
+  return { status: 'OK' }
 }
 ```
 
@@ -155,11 +145,9 @@ The default actions are as follows:
 Use this action when you want to create a new document.
 
 ```js
-module.exports = {
-  main: async function($) {
-    const { values = {} } = $.params
-    return await $.app.db('model').create(values)
-  }
+module.exports = async function($) {
+  const { values = {} } = $.params
+  return await $.db('model').create(values)
 }
 ```
 
@@ -168,11 +156,9 @@ module.exports = {
 Use this action when you want to update a document.
 
 ```js
-module.exports = {
-  main: async function($) {
-    const { query = {}, values = {} } = $.params
-    return await $.app.db('model').update(query, values)
-  }
+module.exports = async function($) {
+  const { query = {}, values = {} } = $.params
+  return await $.db('model').update(query, values)
 }
 ```
 
@@ -181,11 +167,9 @@ module.exports = {
 Use this action when you want to get a single document.
 
 ```js
-module.exports = {
-  main: async function($) {
-    const { query = {}, fields = {} } = $.params
-    return await $.app.db('model').get(query)
-  }
+module.exports = async function($) {
+  const { query = {}, fields = {} } = $.params
+  return await $.db('model').get(query)
 }
 ```
 
@@ -194,11 +178,9 @@ module.exports = {
 Use this action when you want to find documents. Supports fields, sort, skip and limit, and can be used for pagination.
 
 ```js
-module.exports = {
-  main: async function($) {
-    const { query = {}, fields = {}, sort = {}, skip = 0, limit = 0 } = $.params
-    return await $.app.db('model').find(query, { fields, sort, skip, limit })
-  }
+module.exports = async function($) {
+  const { query = {}, fields = {}, sort = {}, skip = 0, limit = 0 } = $.params
+  return await $.db('model').find(query, { fields, sort, skip, limit })
 }
 ```
 
@@ -207,11 +189,9 @@ module.exports = {
 Use this action to count documents.
 
 ```js
-module.exports = {
-  main: async function($) {
-    const { query = {} } = $.params
-    return { n: await $.app.db('model').count(query) }
-  }
+module.exports = async function($) {
+  const { query = {} } = $.params
+  return { n: await $.db('model').count(query) }
 }
 ```
 
@@ -220,9 +200,9 @@ module.exports = {
 Use this action to delete documents.
 
 ```js
-async function($) {
+module.exports = async function($) {
   const { query = {} } = $.params
-  return await $.app.db('model').delete(query)
+  return await $.db('model').delete(query)
 }
 ```
 

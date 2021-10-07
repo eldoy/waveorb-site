@@ -102,29 +102,29 @@ The Waveorb client for websockets is based on the [wsrecon library.](https://git
 The action name and parameters in the client matches the server action name and validation. If your server action looks like this:
 ```js
 // app/actions/project/create.js
-module.exports = {
-  main: async function($) {
+module.exports = async function($) {
     // The values parameter will be validated like this
-    validate: {
-      values: {
-        name: {
-          is: '$string'
-        }
+  await $.validate({
+    values: {
+      name: {
+        is: '$string'
       }
-    },
-    main: async function($) {
-      // The values parameter is available in $.params:
-      $.params.values
-
-      // Extract like this
-      const { values } = $.params
     }
-  }
+  })
+
+  // The values parameter is available in $.params:
+  $.params.values
+
+  // Extract like this
+  const { values } = $.params
+
+  // Create new project and return the result
+  return await $.db('project').create(values)
 }
 ```
-then the client will run the action on the server like this and validate the `values` parameter:
+then from the browser, run the action on the server like this and validate the `values` parameter:
 ```js
-await api({
+const result = await api({
   action: 'project/create',
   values: { name: 'Hello' }
 })
