@@ -10,7 +10,7 @@ npm i waveorb-client
 
 ### Usage
 
-The Waveorb client is included in when you use `waveorb create` to make an application. If you're setting it up from scratch, copy the `/dist/waveorb.js` file to `app/assets/js` and include it in your layout:
+The Waveorb client is included when you use `waveorb create` to make an application. If you're setting it up from scratch, copy the `/dist/waveorb.js` file to `app/assets/js` and include it in your layout:
 ```html
 <script src="/js/waveorb-min.js"></script>
 ```
@@ -72,20 +72,17 @@ var socket = await waveorb('ws://localhost:5000', {
   reconnect: 1000
 })
 
-// Register events like this
-socket.on('open', (event) => {
-  console.log('Connection open')
-})
-
+// Listen for close events
 socket.on('close', (event) => {
   console.log('Connection closed')
 })
 
+// Listen for error events
 socket.on('error', (event) => {
   console.log('Connection error')
 })
 
-// This is where
+// This is where you receive messages
 socket.on('message', (data, event) => {
   console.log('Received message', data)
 })
@@ -97,6 +94,15 @@ socket.send({
 })
 ```
 The Waveorb client for websockets is based on the [wsrecon library.](https://github.com/eldoy/wsrecon)
+
+In your action on the server, you can find your websocket connections like this:
+```js
+module.exports = async function($) {
+  // ...
+  const clients = $.server.websocket.clients
+  // ...
+}
+```
 
 ### Connecting client and server
 The action name and parameters in the client matches the server action name and validation. If your server action looks like this:
