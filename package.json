@@ -26,11 +26,11 @@
   "author": "Vidar Eldøy <vidar@eldoy.com>",
   "license": "MIT",
   "dependencies": {
-    "extras": "^0.7.1",
-    "sass": "^1.32.12",
-    "waveorb": "^0.14.14"
+    "extras": "^0.7.4",
+    "sass": "^1.42.1",
+    "waveorb": "^0.19.3"
   },
   "devDependencies": {
-    "concurrently": "^6.0.2"
+    "concurrently": "^6.3.0"
   }
 }
