@@ -68,10 +68,10 @@ module.exports = async function($) {
       <h3>Ready to give it a try?</h3>
       <p>The platform is open source and totally free.</p>
       <p>
-        <a class="button" href="/docs.html">Check out the docs</a>
+        <a class="button" href="/docs">Check out the docs</a>
       </p>
       <p class="learn-more">
-        or learn more on <a href="/about.html">the about page</a>
+        or learn more on <a href="/about">the about page</a>
       </p>
     </div>
     <div class="signature">
