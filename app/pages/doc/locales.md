@@ -150,6 +150,8 @@ validation:
   $email: must be an email
   $url: must be a URL
   match: must match '%s'
+field:
+  error: field error
 ```
 
 Copy this to your other locale files in `app/locales` and translate them to make them work with your language.
