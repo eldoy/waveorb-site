@@ -26,9 +26,9 @@ module.exports = async function($) {
   return await $.db('comment').create(values)
 }
 ```
-First filters are run, then before, validations, main and after. In any of the functions you can add to the orb object `$` for use later.
+Normally you run filters first, then validations and then the rest of the function.
 
-If you return something from the main function, then after will not be run. Return or throw stops the execution flow and return data to the client. As each of the functions are async functions, you can fetch data and wait for it anywhere.
+Return or throw stops the execution flow and return data to the client as JSON data.
 
 ### Validations
 Most of the time we need to validate the parameters sent to a server action. Here's a list of the built in validations:
