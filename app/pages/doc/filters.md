@@ -34,7 +34,7 @@ In the server action you use the filters like this:
 ```js
 module.exports = async function($) {
   // Run the filters in order
-  await $.filters('authenticate', 'admin')
+  await $.filters(['authenticate', 'admin'])
 
   // The rest of the function is only reached if filters are passed
   return await $.db('project').create($.params.data)

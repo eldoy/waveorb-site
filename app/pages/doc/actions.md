@@ -9,7 +9,7 @@ Creating a JSON API with Waveorb server actions is very easy and should be famil
 AJAX, uploads and websockets all connect to the actions in the same way. This is how an action may look:
 ```js
 module.exports = async function($) {
-  await $.filters('authenticate', 'login-required')
+  await $.filters(['authenticate', 'login-required'])
   await $.validate({
     values: {
       project_id: {
