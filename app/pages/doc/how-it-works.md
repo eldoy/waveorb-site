@@ -34,7 +34,7 @@ The page function receives a single object, the orb object `$`, which contains a
 * __$.t__ - Language translation function
 * __$.env__ - Environment variable substitution
 
-Anything you add to the orb object `$`, or the `app` object as with plugins, will be available later. For example, the `$.page.title` will be available in your layout. Later we will show how it is also used with [filters](/doc/filters), [actions](/doc/actions) and [plugins.](/doc/plugins)
+Anything you add to the orb object `$`, either during the request or with plugins, will be available later. For example, the `$.page.title` will be available in your layout. Later we will show how it is also used with [filters](/doc/filters), [actions](/doc/actions) and [plugins.](/doc/plugins)
 
 ### Return values
 

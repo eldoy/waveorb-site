@@ -134,7 +134,7 @@ module.exports = async function($) {
   `
 }
 ```
-Properties (props) can be sent as normal javascript function arguments. The component is just a simple Javascript function that return a string of HTML.
+Properties (props) can be sent as normal javascript function arguments. The component is just a simple Javascript function that returns a string of HTML.
 ```js
 // Prepare the function for receiving props
 module.exports = async function($, props) {
@@ -184,7 +184,7 @@ $.req.cookie('name')
 // Delete cookie
 $.req.cookie('name', '', -1)
 
-// just remove the $.req in front when Haka in the browser
+// just remove the $.req in front using Haka in the browser
 cookie('name', 'hello')
 ```
 
