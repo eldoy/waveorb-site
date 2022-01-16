@@ -13,7 +13,7 @@ module.exports = async function($) {
   await $.validate({
     values: {
       project_id: {
-        is: '$id',
+        is: 'id',
         required: true
       },
       content: {

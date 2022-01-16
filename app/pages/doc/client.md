@@ -113,7 +113,7 @@ module.exports = async function($) {
   await $.validate({
     values: {
       name: {
-        is: '$string'
+        is: 'string'
       }
     }
   })
