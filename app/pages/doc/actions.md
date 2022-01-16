@@ -54,7 +54,8 @@ query: {
     unique: 'user',  // Unique field
     unique: {        // Unique field, expanded
       model: 'user', // Specify db model
-      fields: ['id'] // Specify fields in query
+      fields: 'id'   // Specify fields in query (default)
+      fields: ['id'] // Multiple fields
     },
     matcher: async function(val, $) {
       // Validation fails on truthy value
