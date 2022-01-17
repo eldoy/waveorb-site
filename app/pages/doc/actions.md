@@ -51,12 +51,8 @@ query: {
     minlength: 5,    // Minimum length of string
     maxlength: 5,    // Maximum length of string
     match: /regex/,  // Must match regex
-    unique: 'user',  // Unique field
-    unique: {        // Unique field, expanded
-      model: 'user', // Specify db model
-      fields: 'id'   // Specify fields in query (default)
-      fields: ['id'] // Multiple fields
-    },
+    unique: 'user',  // Unique field in db model
+    exist: 'user',   // Make sure model exists in db
     matcher: async function(val, $) {
       // Validation fails on truthy value
       if (!val) {
@@ -64,7 +60,7 @@ query: {
       }
       // Return nothing or undefined to pass
     },
-    exist: 'user',  // Document must exist in db model
+
     is: 'boolean',  // Must be true or false
     is: 'string',   // Must be a string
     is: 'number',   // Must be a number, integer or decimal (float)

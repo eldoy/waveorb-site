@@ -28,7 +28,7 @@
   "dependencies": {
     "extras": "^0.8.1",
     "sass": "^1.48.0",
-    "waveorb": "^0.23.2"
+    "waveorb": "^0.23.4"
   },
   "devDependencies": {
     "concurrently": "^7.0.0"
