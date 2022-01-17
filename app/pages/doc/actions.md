@@ -64,6 +64,7 @@ query: {
       }
       // Return nothing or undefined to pass
     },
+    exist: 'user',  // Document must exist in db model
     is: 'boolean',  // Must be true or false
     is: 'string',   // Must be a string
     is: 'number',   // Must be a number, integer or decimal (float)
