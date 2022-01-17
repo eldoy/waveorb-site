@@ -52,7 +52,7 @@ query: {
     maxlength: 5,    // Maximum length of string
     match: /regex/,  // Must match regex
     unique: 'user',  // Unique field in db model
-    exist: 'user',   // Make sure model exists in db
+    exist: 'user',   // Check if model exists in db
     matcher: async function(val, $) {
       // Validation fails on truthy value
       if (!val) {
@@ -60,7 +60,6 @@ query: {
       }
       // Return nothing or undefined to pass
     },
-
     is: 'boolean',  // Must be true or false
     is: 'string',   // Must be a string
     is: 'number',   // Must be a number, integer or decimal (float)
