@@ -136,8 +136,8 @@ validation:
   in: must be one of %s
   nin: must not be one of %s
   length: length must be %s
-  minlength: minimum length is %s
-  maxlength: maximum length is %s
+  min: minimum length is %s
+  max: maximum length is %s
   boolean: must be true or false
   string: must be a string
   number: must be a number

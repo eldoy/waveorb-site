@@ -17,7 +17,7 @@ module.exports = async function($) {
         required: true
       },
       content: {
-        minlength: 3,
+        min: 3,
         required: true
       }
     }
@@ -48,8 +48,8 @@ query: {
     in: [1, 2, 3],   // Must be in list
     nin: [1, 2, 3],  // Must not be in list
     length: 5,       // Length of string must be
-    minlength: 5,    // Minimum length of string
-    maxlength: 5,    // Maximum length of string
+    min: 5,          // Minimum length of string
+    max: 5,          // Maximum length of string
     match: /regex/,  // Must match regex
     unique: 'user',  // Unique field in db model
     exist: 'user',   // Check if model exists in db
