@@ -115,19 +115,19 @@ Then in one of your [app's pages](/doc/pages) use this HTML:
 var api = waveorb('https://waveorb.com/api')
 
 // Define your submit function
-function handleSubmit(form) {
+function handleSubmit(btn) {
   // Using the Haka form serializer to gather the data
-  var values = serialize(form)
+  var values = serialize(btn.form)
 
   // Send the data to the action
   var result = await api({ action: 'project/create', values })
   if (result.error) {
     // Join all the errors and display under the right input
-    Object.keys(result.data).forEach(function(key) {
-      text(`.${key}-error`, result.data[key].join(', '))
+    Object.keys(result.values).forEach(function(key) {
+      text(`.error-${key}`, result.values[key].join(', '))
     })
   } else {
-    // Redirect to login
+    // Redirect to project list
     window.location = '/projects'
   }
 }
