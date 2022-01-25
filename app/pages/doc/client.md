@@ -10,7 +10,7 @@ npm i waveorb-client
 
 ### Usage
 
-The Waveorb client is included when you use `waveorb create` to make an application. If you're setting it up from scratch, copy the `/dist/waveorb.js` file to `app/assets/js` and include it in your layout:
+The Waveorb client is included when you use `waveorb create` to make an application. If you're setting it up from scratch, copy the [/dist/waveorb-min.js](https://raw.githubusercontent.com/eldoy/waveorb-client/master/dist/waveorb-min.js) file to `app/assets/js` and include it in your layout:
 ```html
 <script src="/js/waveorb-min.js"></script>
 ```
