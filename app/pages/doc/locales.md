@@ -126,6 +126,7 @@ Here are the built in default error messages for English `en`. They can be overr
 ```yml
 validation:
   error: validation error
+  field: field error
   required: is required
   eq: must be equal to %s
   ne: must not be equal to %s
@@ -151,8 +152,6 @@ validation:
   url: must be a URL
   match: must match '%s'
   unique: must be unique
-  allow: field is not allowed
-  deny: field is denied
 ```
 
 Copy this to your other locale files in `app/locales` and translate them to make them work with your language.
