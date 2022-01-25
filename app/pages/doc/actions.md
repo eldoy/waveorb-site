@@ -60,17 +60,18 @@ query: {
       }
       // Return nothing or undefined to pass
     },
-    is: 'boolean',  // Must be true or false
-    is: 'string',   // Must be a string
-    is: 'number',   // Must be a number, integer or decimal (float)
-    is: 'integer',  // Must be an integer
-    is: 'decimal',  // Must be a decimal number
-    is: 'date',     // Must be a date
-    is: 'id',       // Must be an id
-    is: 'object',   // Must be an object
-    is: 'array',    // Must an array
-    is: 'email',    // Must be an email address
-    is: 'url'       // Must be a URL
+    is: 'boolean',   // Must be true or false
+    is: 'string',    // Must be a string
+    is: 'number',    // Must be a number, integer or decimal (float)
+    is: 'integer',   // Must be an integer
+    is: 'decimal',   // Must be a decimal number
+    is: 'date',      // Must be a date
+    is: 'id',        // Must be an id
+    is: 'object',    // Must be an object
+    is: 'array',     // Must an array
+    is: 'email',     // Must be an email address
+    is: 'undefined', // Must be undefined
+    is: 'url'        // Must be a URL
   }
 }
 ```
