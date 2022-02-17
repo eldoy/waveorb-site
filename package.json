@@ -26,9 +26,9 @@
   "author": "Vidar Eldøy <vidar@eldoy.com>",
   "license": "MIT",
   "dependencies": {
-    "extras": "^0.9.0",
-    "sass": "^1.49.0",
-    "waveorb": "^0.25.0"
+    "extras": "^0.10.4",
+    "sass": "^1.49.7",
+    "waveorb": "^0.27.6"
   },
   "devDependencies": {
     "concurrently": "^7.0.0"
