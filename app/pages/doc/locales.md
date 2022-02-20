@@ -139,19 +139,34 @@ validation:
   length: length must be %s
   min: minimum length is %s
   max: maximum length is %s
-  boolean: must be true or false
-  string: must be a string
-  number: must be a number
-  integer: must be an integer
-  decimal: must be a decimal
-  date: must be a date
-  id: must be an id
-  object: must be an object
-  array: must be an array
-  email: must be an email
-  url: must be a URL
   match: must match '%s'
   unique: must be unique
+
+  # Is
+  is_boolean: must be true or false
+  is_string: must be a string
+  is_number: must be a number
+  is_integer: must be an integer
+  is_decimal: must be a decimal
+  is_date: must be a date
+  is_id: must be an id
+  is_object: must be an object
+  is_array: must be an array
+  is_email: must be an email
+  is_url: must be a URL
+
+  # Isnt
+  isnt_boolean: must not be true or false
+  isnt_string: must not be a string
+  isnt_number: must not be a number
+  isnt_integer: must not be an integer
+  isnt_decimal: must not be a decimal
+  isnt_date: must not be a date
+  isnt_id: must not be an id
+  isnt_object: must not be an object
+  isnt_array: must not be an array
+  isnt_email: must not be an email
+  isnt_url: must not be a URL
 ```
 
 Copy this to your other locale files in `app/locales` and translate them to make them work with your language.
