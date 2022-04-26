@@ -2,11 +2,11 @@
 
 Layouts surround [your pages](/doc/pages) and [mails](/doc/mail). It is where your title, head, nav and footer usually goes. You can have multiple layouts if you want.
 
-You specify the layout to use in your page with `$.page.layout = 'blog'`, where `'blog'` is the name of the layout. In this case it would match the layout file `app/layouts/blog.js`. If none is specified, it defaults to `default`.
+You specify the layout to use in your page with `$.page.layout = 'blog'`, where `'blog'` is the name of the layout. In this case it would match the layout file `app/layouts/blog.js`. If none is specified, it defaults to `main`.
 
 Mail layouts usually contain the signature and things you want included with every outgoing email.
 
-This minimal example layout is based on the one found in `app/layouts/default.js` after running `waveorb create`, read the comments to see what each section does:
+This minimal example layout is based on the one found in `app/layouts/main.js` after running `waveorb create`, read the comments to see what each section does:
 ```js
 // Layouts must export an async function($)
 module.exports = async function($) {
