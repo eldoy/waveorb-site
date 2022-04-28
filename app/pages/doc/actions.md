@@ -86,7 +86,7 @@ The error message then looks like this, with each failing field and errors as an
 }
 ```
 
-### Full usage example
+### Using actions from pages
 
 In `app/actions/project` create a file called `create.js` with the following content:
 ```js
@@ -135,13 +135,11 @@ function handleSubmit(btn) {
 </script>
 ```
 
-### Default actions
+### Example actions
 
-By default Waveorb comes with default actions built in so you can start development without worrying about your API design.
+These are example actions you can use as a template for your JSON API.
 
-To set up your backend using default actions simply create an empty action file. If you need to save your data, create an empty file called `create.js` in `app/actions/model` and it just works.
-
-The default actions are as follows:
+They are similar to the actions created by [waveorb generate.](/doc/command-line#generate)
 
 #### Create action
 
