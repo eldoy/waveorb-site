@@ -46,8 +46,7 @@ var api = waveorb('http://localhost:5000')
 var api = waveorb('https://localhost:5000')
 
 // Send through http
-var result = await api({
-  action: 'project/create',
+var result = await api('/project/create', {
   values: { name: 'Celebration' }
 })
 ```
@@ -130,8 +129,7 @@ module.exports = async function($) {
 ```
 then from the browser, run the action on the server like this and validate the `values` parameter:
 ```js
-const result = await api({
-  action: 'project/create',
+const result = await api('/project/create', {
   values: { name: 'Hello' }
 })
 ```
