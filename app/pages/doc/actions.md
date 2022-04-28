@@ -121,7 +121,7 @@ function handleSubmit(btn) {
   var values = serialize(btn.form)
 
   // Send the data to the action
-  var result = await api({ action: 'project/create', values })
+  var result = await api('/project/create', { values })
   if (result.error) {
     // Join all the errors and display under the right input
     Object.keys(result.values).forEach(function(key) {

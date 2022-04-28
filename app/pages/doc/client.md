@@ -145,10 +145,7 @@ Create the upload handler:
 // Upload from browser
 function handleUpload() {
   var input = q('input[type="file"]')
-  var urls = await api(
-    { action: 'upload/create' },
-    { files: input.files }
-  )
+  var urls = await api('/upload/create', {}, { files: input.files })
 }
 ```
 
@@ -159,8 +156,8 @@ Create the HTML input element:
 
 To track the progress, do this:
 ```js
-var urls = await api(
-  { action: 'upload/create' },
+var urls = await api('/upload/create',
+  {}, // Empty params
   {
     files: input.files,
     progress: function(event) {
@@ -187,8 +184,8 @@ const waveorb = require('waveorb-client')
 const api = waveorb('https://example.com/api')
 
 // Use the files option to upload to your server
-const urls = await api(
-  { action: 'upload/create' },
+const urls = await api('/upload/create',
+  {}, // Empty params
   { files: ['app/assets/file.png'] }
 )
 ```
