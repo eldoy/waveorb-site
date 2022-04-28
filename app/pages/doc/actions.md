@@ -206,16 +206,7 @@ module.exports = async function($) {
   return await $.db('model').delete(query)
 }
 ```
-
-The `model` in the database queries here are automatically replaced with the name of the directory your action file lives in.
-
-Once you need to customize your backend, just write your own actions to replace the default ones.
-
-### Web hooks
-
-If you need to use Waveorb actions without the Waveorb client you can access your actions via URL too. If your action is in `app/actions/project/create.js`, you can access it via the URL `/api/project/create` using a `POST` request.
-
-In development testing you remove the `/api` to make it just `/project/create`.
+The `model` in the database queries here should be replaced with the name of your model.
 
 <div class="nav">
   <div><a href="/doc/pages">&larr; Pages</a></div>
