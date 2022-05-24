@@ -2,7 +2,7 @@
 
 The Waveorb framework is built from the following libraries:
 
-* [waveorb-core](https://github.com/eldoy/waveorb-core)
+* [waveorb](https://github.com/eldoy/waveorb)
 * [waveorb-client](https://github.com/eldoy/waveorb-client)
 * [furu](https://github.com/eldoy/furu)
 * [bparse](https://github.com/eldoy/bparse)
@@ -17,7 +17,6 @@ The Waveorb framework is built from the following libraries:
 * [wcrypt](https://github.com/eldoy/wcrypt)
 * [wmail](https://github.com/eldoy/wmail)
 * [mongowave](https://github.com/eldoy/mongowave)
-* [wavedb](https://github.com/eldoy/wavedb)
 * [wsrecon](https://github.com/eldoy/wsrecon)
 * [taarn](https://github.com/eldoy/taarn)
 
