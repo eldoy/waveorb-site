@@ -18,7 +18,6 @@ The Waveorb framework is built from the following libraries:
 * [wmail](https://github.com/eldoy/wmail)
 * [mongowave](https://github.com/eldoy/mongowave)
 * [wavedb](https://github.com/eldoy/wavedb)
-* [wpay](https://github.com/eldoy/wpay)
 * [wsrecon](https://github.com/eldoy/wsrecon)
 * [taarn](https://github.com/eldoy/taarn)
 
