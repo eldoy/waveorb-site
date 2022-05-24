@@ -27,7 +27,7 @@ The page function receives a single object, the orb object `$`, which contains a
 * __$.req__ - Request object, a NodeJS [http.ServerResponse instance](https://nodejs.org/api/http.html#http_class_http_serverresponse)
 * __$.res__ - Response object, a NodeJS [http.ClientRequest instance](https://nodejs.org/api/http.html#http_class_http_clientrequest)
 * __$.socket__ - Socket object from the [ws project](https://github.com/websockets/ws)
-* __$.server__ - Underlying [server instance](https://github.com/eldoy/sirloin)
+* __$.server__ - Underlying [server instance](https://github.com/eldoy/furu)
 * __$.tools__ - Built in [tools you may need](https://github.com/eldoy/extras)
 * __$.lang__ - The request language like _en_ or _no_, two character ISO code.
 * __$.link__ - Link translation function

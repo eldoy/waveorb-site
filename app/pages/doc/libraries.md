@@ -4,10 +4,10 @@ The Waveorb framework is built from the following libraries:
 
 * [waveorb-core](https://github.com/eldoy/waveorb-core)
 * [waveorb-client](https://github.com/eldoy/waveorb-client)
-* [sirloin](https://github.com/eldoy/sirloin)
+* [furu](https://github.com/eldoy/furu)
 * [bparse](https://github.com/eldoy/bparse)
 * [wcookie](https://github.com/eldoy/wcookie)
-* [hangersteak](https://github.com/eldoy/hangersteak)
+* [smor](https://github.com/eldoy/smor)
 * [waveorb-site](https://github.com/eldoy/waveorb-site)
 * [waveorb-templates](https://github.com/eldoy/waveorb-templates)
 * [waveorb-generate](https://github.com/eldoy/waveorb-generate)

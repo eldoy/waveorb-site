@@ -72,9 +72,9 @@ You can use all of the packages on npm to build your app, but we've also made a 
 
 * [a frontend DOM manipulation library](https://github.com/eldoy/haka)
 * [an email library](https://github.com/eldoy/wmail)
-* [a payment library](https://github.com/eldoy/wpay)
-* [a web server](https://github.com/eldoy/sirloin)
-* [a static file server](https://github.com/eldoy/hangersteak)
+* [a database client](https://github.com/eldoy/mongowave)
+* [a web server](https://github.com/eldoy/furu)
+* [a static file server](https://github.com/eldoy/smor)
 * [an upload and download client](https://github.com/eldoy/dugg)
 
 and [many more.](/doc/libraries) They can all be used in your app via the plugin system, or as part of your scripts and external resources.
