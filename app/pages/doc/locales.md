@@ -58,25 +58,17 @@ The route config contains options for your page routes. To make route translatio
 
 The route config goes in the `app/config/routes.yml` file:
 ```yaml
-# Pretty output, default false
-pretty: true
+# Map '/' to 'pages/index.js' English (en)
+get#/: en@index
 
-# Translate Javascript in HTML, default true
-compile: false
+# Map '/es/' to 'pages/index.js' Spanish (es)
+get#/es/: es@index
 
-# Route map for translations
-routemap:
-  # Map '/' to 'pages/index.js' English (en)
-  /: en@index
+# Map '/about' to 'pages/about.js' English (en)
+get#/about: en@about
 
-  # Map '/es/' to 'pages/index.js' Spanish (es)
-  /es/: es@index
-
-  # Map '/about' to 'pages/about.js' English (en)
-  /about: en@about
-
-  # Map '/es/sobre' to 'pages/about.js' Spanish (es)
-  /es/sobre: es@about
+# Map '/es/sobre' to 'pages/about.js' Spanish (es)
+get#/es/sobre: es@about
 ```
 
 ### The $.link function
