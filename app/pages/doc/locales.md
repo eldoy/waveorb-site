@@ -117,6 +117,10 @@ The links can also include parameters and hash:
 Here are the built in default error messages for English `en`. They can be overridden by adding them to your locales in `app/locales/en.yml`:
 ```yml
 validation:
+  error: validation error
+  field: field error
+  unique: has been taken
+  exist: does not exist
   required: is required
   eq: must be equal to %s
   ne: must not be equal to %s
