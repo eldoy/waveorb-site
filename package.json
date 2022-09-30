@@ -27,10 +27,10 @@
   "license": "MIT",
   "dependencies": {
     "extras": "^0.10.6",
-    "sass": "^1.54.3",
-    "waveorb": "^0.30.16"
+    "sass": "^1.55.0",
+    "waveorb": "^0.30.21"
   },
   "devDependencies": {
-    "concurrently": "^7.3.0"
+    "concurrently": "^7.4.0"
   }
 }

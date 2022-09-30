@@ -117,8 +117,6 @@ The links can also include parameters and hash:
 Here are the built in default error messages for English `en`. They can be overridden by adding them to your locales in `app/locales/en.yml`:
 ```yml
 validation:
-  error: validation error
-  field: field error
   required: is required
   eq: must be equal to %s
   ne: must not be equal to %s
@@ -131,34 +129,22 @@ validation:
   length: length must be %s
   min: minimum length is %s
   max: maximum length is %s
-  match: must match '%s'
-  unique: must be unique
-
-  # Is
-  is_boolean: must be true or false
-  is_string: must be a string
-  is_number: must be a number
-  is_integer: must be an integer
-  is_decimal: must be a decimal
-  is_date: must be a date
-  is_id: must be an id
-  is_object: must be an object
-  is_array: must be an array
-  is_email: must be an email
-  is_url: must be a URL
-
-  # Isnt
-  isnt_boolean: must not be true or false
-  isnt_string: must not be a string
-  isnt_number: must not be a number
-  isnt_integer: must not be an integer
-  isnt_decimal: must not be a decimal
-  isnt_date: must not be a date
-  isnt_id: must not be an id
-  isnt_object: must not be an object
-  isnt_array: must not be an array
-  isnt_email: must not be an email
-  isnt_url: must not be a URL
+  match: "must match '%s'"
+  is: must be %s
+  isnt: must not be %s
+  boolean: boolean
+  string: string
+  number: number
+  integer: integer
+  decimal: decimal
+  date: date
+  id: id
+  object: object
+  array: array
+  email: email
+  url: URL
+  undefined: undefined
+  null: 'null'
 ```
 
 Copy this to your other locale files in `app/locales` and translate them to make them work with your language.
