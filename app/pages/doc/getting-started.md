@@ -1,6 +1,6 @@
 ## Getting started
 
-Installing Waveorb requires [NodeJS](https:/nodejs.org). Here we will create an app called `hello`, you can call it whatever you want. The `waveorb create` command will pull the latest template from [here.](https://github.com/eldoy/waveorb-templates)
+Installing Waveorb requires [NodeJS](https://nodejs.org). Here we will create an app called `hello`, you can call it whatever you want. The `waveorb create` command will pull the latest template from [here.](https://github.com/eldoy/waveorb-templates)
 
 ```bash
 # Install nodemon

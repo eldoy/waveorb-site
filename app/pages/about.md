@@ -85,4 +85,4 @@ You can also write your own libraries and include them in your app, the Node eco
 
 We are using Waveorb for everything and are loving it. It's so much fun making apps with Waveorb, and so easy to learn. If you have feedback or find issues, send us an email on [hello@waveorb.com](mailto:hello@waveorb.com) or report your [issues on Github.](https://github.com/eldoy/waveorb/issues)
 
-Now head over to [the documentation.](/docs.html) We are looking forward to see what you can create with Waveorb. Enjoy!
+Now head over to [the documentation.](/docs) We are looking forward to see what you can create with Waveorb. Enjoy!
