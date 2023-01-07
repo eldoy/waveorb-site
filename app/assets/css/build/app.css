@@ -17,10 +17,8 @@
  */
 ::before,
 ::after {
-  text-decoration: inherit;
-  /* 1 */
-  vertical-align: inherit;
-  /* 2 */
+  text-decoration: inherit; /* 1 */
+  vertical-align: inherit; /* 2 */
 }
 
 /**
@@ -32,19 +30,13 @@
  * 6. Prevent adjustments of font size after orientation changes in iOS.
  */
 html {
-  cursor: default;
-  /* 1 */
-  line-height: 1.5;
-  /* 2 */
-  overflow-wrap: anywhere;
-  /* 3 */
-  -moz-tab-size: 4;
-  /* 4 */
-  tab-size: 4;
-  /* 4 */
+  cursor: default; /* 1 */
+  line-height: 1.5; /* 2 */
+  overflow-wrap: anywhere; /* 3 */
+  -moz-tab-size: 4; /* 4 */
+  tab-size: 4; /* 4 */
   -webkit-tap-highlight-color: transparent;
-  -webkit-text-size-adjust: 100%;
-  /* 6 */
+  -webkit-text-size-adjust: 100%; /* 6 */
 }
 
 /* Sections
@@ -83,10 +75,8 @@ ul dl {
  * 2. Add the correct box sizing in Firefox.
  */
 hr {
-  color: inherit;
-  /* 1 */
-  height: 0;
-  /* 2 */
+  color: inherit; /* 1 */
+  height: 0; /* 2 */
 }
 
 /**
@@ -111,12 +101,9 @@ nav li::before {
  * 3. Prevent overflow of the container in all browsers (opinionated).
  */
 pre {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
-  overflow: auto;
-  /* 3 */
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+  overflow: auto; /* 3 */
 }
 
 /* Text-level semantics
@@ -144,10 +131,8 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 
 /**
@@ -201,12 +186,9 @@ svg:not([fill]) {
  * 3. Remove text indentation from table contents in Chrome, Edge, and Safari.
  */
 table {
-  border-collapse: collapse;
-  /* 1 */
-  border-color: inherit;
-  /* 2 */
-  text-indent: 0;
-  /* 3 */
+  border-collapse: collapse; /* 1 */
+  border-color: inherit; /* 2 */
+  text-indent: 0; /* 3 */
 }
 
 /* Forms
@@ -242,10 +224,8 @@ button,
  * 2. Correct the padding in Firefox.
  */
 fieldset {
-  border: 1px solid #a0a0a0;
-  /* 1 */
-  padding: 0.35em 0.75em 0.625em;
-  /* 2 */
+  border: 1px solid #a0a0a0; /* 1 */
+  padding: 0.35em 0.75em 0.625em; /* 2 */
 }
 
 /**
@@ -267,10 +247,8 @@ select {
  * 3. Change the resize direction in all browsers (opinionated).
  */
 textarea {
-  margin: 0;
-  /* 1 */
-  resize: vertical;
-  /* 3 */
+  margin: 0; /* 1 */
+  resize: vertical; /* 3 */
 }
 
 /**
@@ -278,10 +256,8 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 [type=search i] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  outline-offset: -2px;
-  /* 2 */
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
 }
 
 /**
@@ -312,10 +288,8 @@ textarea {
  * 2. Change font properties to `inherit` in Safari.
  */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  /* 1 */
-  font: inherit;
-  /* 2 */
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
 }
 
 /**
@@ -476,6 +450,12 @@ body {
   font-size: 17px;
   line-height: 1.6;
 }
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #021837;
+    color: #dfdfdf;
+  }
+}
 
 p {
   margin: 0 0 16px;
@@ -533,6 +513,11 @@ pre {
   white-space: pre-wrap;
   overflow-wrap: break-word;
 }
+@media (prefers-color-scheme: dark) {
+  pre {
+    background: #222;
+  }
+}
 
 code {
   color: #222;
@@ -545,6 +530,11 @@ code {
   word-break: break-all;
   word-wrap: break-word;
 }
+@media (prefers-color-scheme: dark) {
+  code {
+    color: #dfdfdf;
+  }
+}
 
 a:not(.button) {
   color: #074CB2;
@@ -554,6 +544,15 @@ a:not(.button) {
 a:not(.button):hover, a:not(.button):focus {
   color: #053781;
   text-decoration: underline;
+}
+@media (prefers-color-scheme: dark) {
+  a:not(.button) {
+    color: #F17C57;
+  }
+  a:not(.button):hover, a:not(.button):focus {
+    color: #f5a186;
+    text-decoration: underline;
+  }
 }
 
 blockquote {
@@ -797,6 +796,15 @@ button,
   text-decoration: none;
   cursor: pointer;
 }
+@media (prefers-color-scheme: dark) {
+  input[type=submit],
+input[type=reset],
+input[type=button],
+button,
+.button {
+    color: #dfdfdf;
+  }
+}
 
 input[type=submit]::-moz-focus-inner,
 input[type=reset]::-moz-focus-inner,
@@ -873,27 +881,68 @@ td {
 
 code[class*=language-],
 pre[class*=language-] {
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-  font-size: 15px;
+  color: black;
+  background: none;
+  text-shadow: 0 1px white;
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-size: 1em;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
   word-wrap: normal;
-  -moz-tab-size: 2;
-  -o-tab-size: 2;
-  tab-size: 2;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
   -webkit-hyphens: none;
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
 }
 
+pre[class*=language-]::-moz-selection, pre[class*=language-] ::-moz-selection,
+code[class*=language-]::-moz-selection, code[class*=language-] ::-moz-selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+pre[class*=language-]::selection, pre[class*=language-] ::selection,
+code[class*=language-]::selection, code[class*=language-] ::selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+@media print {
+  code[class*=language-],
+pre[class*=language-] {
+    text-shadow: none;
+  }
+}
+/* Code blocks */
+pre[class*=language-] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+}
+
+:not(pre) > code[class*=language-],
+pre[class*=language-] {
+  background: #f5f2f0;
+}
+
+/* Inline code */
+:not(pre) > code[class*=language-] {
+  padding: 0.1em;
+  border-radius: 0.3em;
+  white-space: normal;
+}
+
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: #5a5a5a;
+  color: slategray;
 }
 
 .token.punctuation {
@@ -929,6 +978,7 @@ pre[class*=language-] {
 .language-css .token.string,
 .style .token.string {
   color: #9a6e3a;
+  /* This background color was intended by the author of this theme. */
   background: hsla(0deg, 0%, 100%, 0.5);
 }
 
@@ -962,6 +1012,109 @@ pre[class*=language-] {
   cursor: help;
 }
 
+@media (prefers-color-scheme: dark) {
+  code[class*=language-],
+pre[class*=language-] {
+    color: #f8f8f2;
+    background: none;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    font-size: 1em;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+  /* Code blocks */
+  pre[class*=language-] {
+    padding: 1em;
+    margin: 0.5em 0;
+    overflow: auto;
+    border-radius: 0.3em;
+  }
+  :not(pre) > code[class*=language-],
+pre[class*=language-] {
+    background: #272822;
+  }
+  /* Inline code */
+  :not(pre) > code[class*=language-] {
+    padding: 0.1em;
+    border-radius: 0.3em;
+    white-space: normal;
+  }
+  .token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #8292a2;
+  }
+  .token.punctuation {
+    color: #f8f8f2;
+  }
+  .token.namespace {
+    opacity: 0.7;
+  }
+  .token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #f92672;
+  }
+  .token.boolean,
+.token.number {
+    color: #ae81ff;
+  }
+  .token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #a6e22e;
+  }
+  .token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+    color: #f8f8f2;
+    background: #222;
+  }
+  .token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+    color: #e6db74;
+  }
+  .token.keyword {
+    color: #66d9ef;
+  }
+  .token.regex,
+.token.important {
+    color: #fd971f;
+  }
+  .token.important,
+.token.bold {
+    font-weight: bold;
+  }
+  .token.italic {
+    font-style: italic;
+  }
+  .token.entity {
+    cursor: help;
+  }
+}
 main {
   padding: 0 0 2rem;
   max-width: 600px;
@@ -1030,6 +1183,11 @@ code:not([class]) {
   padding: 1px 5px;
   border: 1px solid #dfdfdf;
   border-radius: 5px;
+}
+@media (prefers-color-scheme: dark) {
+  code:not([class]) {
+    background: #222;
+  }
 }
 
 #flash {
