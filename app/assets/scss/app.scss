@@ -64,6 +64,9 @@ code:not([class]) {
   padding: 1px 5px;
   border: 1px solid #dfdfdf;
   border-radius: 5px;
+  @media (prefers-color-scheme: dark) {
+    background: #222;
+  }
 }
 
 #flash {
