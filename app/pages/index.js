@@ -1,63 +1,72 @@
-module.exports = async function($) {
+module.exports = async function ($) {
   $.page.title = 'Javascript web app development framework'
 
-  return /* html */`
+  return /* HTML */ `
     <style>
       main {
         padding: 2rem 0;
         text-align: center;
         max-width: 100%;
       }
-      .intro {
-        margin-bottom: 3rem;
-        max-width: 600px;
-        margin: 0 auto;
-        padding: 0 0.5rem 2rem;
-      }
       .github {
         padding-top: 1.5rem;
       }
-      .why {
-        margin-bottom: 4rem;
-        background: #115277;
-        color: white;
-        padding: 2rem 0 3rem;
-      }
-      .action {
-        margin-bottom: 4rem;
+
+      h1 {
+        margin-top: 50px;
+        color: #0d5060;
       }
       h3 {
         margin-top: 2rem;
       }
+      .signature {
+        margin-top: 8rem;
+        font-size: 16px;
+      }
     </style>
     <div class="intro">
-      <img src="/img/waveorb-logo-full.svg" alt="waveorb-logo" height="223" width="584">
+      <img
+        src="/img/waveorb-logo-center.svg"
+        alt="waveorb-logo"
+        height="223"
+        width="584"
+      />
       <h1>Create incredible applications</h1>
-      <p>
-        Javascript Web App Development Framework
-      </p>
+      <p>Javascript Web App Development Framework</p>
       <div class="github">
-        <img src="/img/github-badge.svg" alt="Github badge" width="32" height="32">
+        <img
+          src="/img/github-badge.svg"
+          alt="Github badge"
+          width="32"
+          height="32"
+        />
       </div>
       <div class="github-links">
-        <a href="https://github.com/eldoy/waveorb" title="Source Code">Source Code</a>
+        <a href="https://github.com/eldoy/waveorb" title="Source Code"
+          >Source Code</a
+        >
         &nbsp; | &nbsp;
-        <a href="https://github.com/eldoy/waveorb/issues" title="Report Issue">Report Issue</a>
+        <a href="https://github.com/eldoy/waveorb/issues" title="Report Issue"
+          >Report Issue</a
+        >
       </div>
     </div>
     <div class="why">
       <h2>Why use Waveorb?</h2>
       <h3>Speed and availability</h3>
       <p>
-        Go serverless with pre-built static HTML pages, fully Jamstack compliant.
+        Go serverless with pre-built static HTML pages, fully Jamstack
+        compliant.
       </p>
       <h3>Flexibility</h3>
       <p>
-        Build web apps using HTML, Javascript and CSS, or just create a backend service.
+        Build web apps using HTML, Javascript and CSS, or just create a backend
+        service.
       </p>
       <h3>Standard technologies</h3>
       <p>
-        The simplicity of our technology stack makes sure your app never expires.
+        The simplicity of our technology stack makes sure your app never
+        expires.
       </p>
       <h3>Ease of use</h3>
       <p>
@@ -75,7 +84,10 @@ module.exports = async function($) {
       </p>
     </div>
     <div class="signature">
-      Made in Oslo, Norway with passion by <a href="https://eldoy.com" title="Eldøy Projects home page">Eldøy Projects</a>
+      Made in Oslo, Norway with passion by
+      <a href="https://eldoy.com" title="Eldøy Projects home page"
+        >Eldøy Projects</a
+      >
     </div>
   `
 }

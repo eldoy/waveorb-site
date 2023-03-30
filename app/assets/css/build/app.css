@@ -1116,9 +1116,10 @@ pre[class*=language-] {
   }
 }
 main {
-  padding: 0 0 2rem;
+  padding: 16px;
   max-width: 600px;
   min-height: 250px;
+  font-size: 18px;
 }
 @media screen and (max-width: 615px) {
   main {
@@ -1225,6 +1226,45 @@ code:not([class]) {
 }
 .nav div:first-child {
   flex-grow: 1;
+}
+
+.button {
+  background: #5a517e;
+  color: #fff;
+  border: 1px solid #5a517e;
+  padding: 10px 20px;
+  font-size: 20px;
+}
+.button:hover {
+  background: #0d5060;
+}
+
+.intro {
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 0.5rem 2rem;
+}
+@media screen and (max-width: 615px) {
+  .intro {
+    padding: 2rem 1rem 3rem;
+  }
+}
+
+.why {
+  margin-bottom: 4rem;
+  background: #0d5060;
+  color: white;
+  padding: 2rem 0 3rem;
+}
+@media screen and (max-width: 615px) {
+  .why {
+    padding: 2rem 1rem 3rem;
+  }
+}
+
+.action {
+  margin-bottom: 4rem;
 }
 
 /*# sourceMappingURL=app.css.map */

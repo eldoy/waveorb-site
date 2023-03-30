@@ -1,5 +1,5 @@
-module.exports = async function($) {
-  return /* html */`
+module.exports = async function ($) {
+  return /* html */ `
     <!doctype html>
     <html lang="${$.lang}">
       <head>
@@ -18,7 +18,7 @@ module.exports = async function($) {
           <nav>
             <div>
               <a href="${$.link('index')}" title="Home page">
-                <img src="/img/waveorb-logo-full.svg" height="56" width="146" alt="waveorb home logo">
+                <img src="/img/waveorb-logo-long.svg" height="64" width="146" alt="waveorb home logo">
               </a>
             </div>
             <div>

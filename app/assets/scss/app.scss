@@ -1,14 +1,15 @@
 $font-size: 17px;
-$font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+$font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
 @import 'vcss.scss';
 @import 'prism.scss';
 
 main {
-  padding: 0 0 2rem;
+  padding: 16px;
   max-width: 600px;
   min-height: 250px;
+  font-size: 18px;
   @media screen and (max-width: 615px) {
     padding: 0 0.5rem 2rem;
   }
@@ -104,5 +105,38 @@ code:not([class]) {
   div:first-child {
     flex-grow: 1;
   }
+}
 
+.button {
+  background: #5a517e;
+  color: #fff;
+  border: 1px solid #5a517e;
+  padding: 10px 20px;
+  font-size: 20px;
+  &:hover {
+    background: #0d5060;
+  }
+}
+
+.intro {
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 0.5rem 2rem;
+  @media screen and (max-width: 615px) {
+    padding: 2rem 1rem 3rem;
+  }
+}
+
+.why {
+  margin-bottom: 4rem;
+  background: #0d5060;
+  color: white;
+  padding: 2rem 0 3rem;
+  @media screen and (max-width: 615px) {
+    padding: 2rem 1rem 3rem;
+  }
+}
+.action {
+  margin-bottom: 4rem;
 }
