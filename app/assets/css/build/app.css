@@ -452,7 +452,7 @@ body {
 }
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #021837;
+    background-color: #010d1f;
     color: #dfdfdf;
   }
 }
@@ -537,7 +537,7 @@ code {
 }
 
 a:not(.button) {
-  color: #074CB2;
+  color: #074cb2;
   text-decoration: none;
   background-color: transparent;
 }
@@ -547,7 +547,7 @@ a:not(.button):hover, a:not(.button):focus {
 }
 @media (prefers-color-scheme: dark) {
   a:not(.button) {
-    color: #F17C57;
+    color: #f17c57;
   }
   a:not(.button):hover, a:not(.button):focus {
     color: #f5a186;
@@ -779,7 +779,7 @@ input[type=reset],
 input[type=button],
 button,
 .button {
-  background-color: #F17C57;
+  background-color: #f17c57;
   border-radius: 4px;
   color: #222;
   padding: 8px 16px;
@@ -789,7 +789,7 @@ button,
   white-space: nowrap;
   vertical-align: middle;
   user-select: none;
-  border: 1px solid #F17C57;
+  border: 1px solid #f17c57;
   font-size: 1rem;
   line-height: 1.5;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -845,7 +845,7 @@ button:disabled,
 .button.disabled {
   opacity: 0.65;
   cursor: not-allowed;
-  background-color: #F17C57;
+  background-color: #f17c57;
 }
 
 dl {
